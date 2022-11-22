@@ -1,11 +1,11 @@
-[![CircleCI](https://circleci.com/gh/giantswarm/{APP-NAME}.svg?style=shield)](https://circleci.com/gh/giantswarm/{APP-NAME})
+[![CircleCI](https://circleci.com/gh/giantswarm/default-apps-azure.svg?style=shield)](https://circleci.com/gh/giantswarm/default-apps-azure)
 
 [Read me after cloning this template (GS staff only)](https://intranet.giantswarm.io/docs/dev-and-releng/app-developer-processes/adding_app_to_appcatalog/)
 
-# {APP-NAME} chart
+# default-apps-azure chart
 
-Giant Swarm offers a {APP-NAME} App which can be installed in workload clusters.
-Here we define the {APP-NAME} chart with its templates and default configuration.
+Giant Swarm offers a default-apps-azure App which can be installed in workload clusters.
+Here we define the default-apps-azure chart with its templates and default configuration.
 
 **What is this app?**
 
