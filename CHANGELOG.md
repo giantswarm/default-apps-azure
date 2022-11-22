@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.1] - 2022-11-22
+
 ### Added
 
 - add `cilium` and Azure `CPI`
@@ -15,4 +17,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - changed `app.giantswarm.io` label group was changed to `application.giantswarm.io`
 
-[Unreleased]: https://github.com/giantswarm/default-apps-azure/tree/main
+[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.1...HEAD
+[0.0.1]: https://github.com/giantswarm/default-apps-azure/releases/tag/v0.0.1
