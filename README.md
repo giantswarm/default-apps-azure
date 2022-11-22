@@ -1,7 +1,5 @@
 [![CircleCI](https://circleci.com/gh/giantswarm/default-apps-azure.svg?style=shield)](https://circleci.com/gh/giantswarm/default-apps-azure)
 
-[Read me after cloning this template (GS staff only)](https://intranet.giantswarm.io/docs/dev-and-releng/app-developer-processes/adding_app_to_appcatalog/)
-
 # default-apps-azure chart
 
 Giant Swarm offers a default-apps-azure App which can be installed in workload clusters.

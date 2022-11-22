@@ -1,12 +1,35 @@
-name: default-apps-azure
-serviceType: managed
+clusterName: ""
+organization: ""
 
-project:
-  branch: "[[ .Branch ]]"
-  commit: "[[ .SHA ]]"
+userConfig:
+  cilium:
+    configMap:
+      values: |
+        ipam:
+          mode: kubernetes
 
-image:
-  registry: quay.io
-  name: giantswarm/default-apps-azure
-  tag: v0.0.1
-  pullPolicy: IfNotPresent
+apps:
+  azure-cloud-controller-manager:
+    appName: azure-cloud-controller-manager
+    chartName: azure-cloud-controller-manager-app
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: false
+    forceUpgrade: false
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/azure-cloud-controller-manager-app
+    version: 1.24.5-gs1
+  cilium:
+    appName: cilium
+    chartName: cilium
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: false
+    forceUpgrade: true
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/cilium-app
+    version: 0.6.0
