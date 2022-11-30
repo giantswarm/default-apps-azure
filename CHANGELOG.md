@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.2] - 2022-11-30
+
 ### Changed
 
 - Push to `cluster-catalog` and `cluster-test-catalog`
@@ -21,5 +23,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - changed `app.giantswarm.io` label group was changed to `application.giantswarm.io`
 
-[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.1...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.2...HEAD
+[0.0.2]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.1...v0.0.2
 [0.0.1]: https://github.com/giantswarm/default-apps-azure/releases/tag/v0.0.1
