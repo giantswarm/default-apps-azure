@@ -12,7 +12,7 @@ apps:
   azure-cloud-controller-manager:
     appName: azure-cloud-controller-manager
     chartName: azure-cloud-controller-manager-app
-    catalog: default
+    catalog: default-test
     clusterValues:
       configMap: true
       secret: false
@@ -20,7 +20,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azure-cloud-controller-manager-app
-    version: 1.24.5-gs1
+    version: 1.24.5-gs1-b1bda633ef859a3b9f499e8344e98aec1cc14214
   cilium:
     appName: cilium
     chartName: cilium
