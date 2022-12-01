@@ -6,6 +6,7 @@ userConfig:
     configMap:
       values: |
         controller:
+          disableAvailabilitySetNodes: false
           masterNodeSelector:
             "node-role.kubernetes.io/control-plane": ""
         linux:
