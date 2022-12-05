@@ -8,7 +8,8 @@ userConfig:
         controller:
           disableAvailabilitySetNodes: false
           masterNodeSelector:
-            "node-role.kubernetes.io/control-plane": ""
+            "kubernetes.io/role": null
+            "node-role.kubernetes.io/control-plane": '""'
         linux:
           azure_credential_file: /etc/kubernetes/azure.json
   cilium:
