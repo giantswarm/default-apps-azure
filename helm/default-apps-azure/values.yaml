@@ -46,7 +46,7 @@ apps:
   azuredisk-csi-driver:
     appName: azuredisk-csi-driver
     chartName: azuredisk-csi-driver-app
-    catalog: default-test
+    catalog: default
     clusterValues:
       configMap: true
       secret: false
