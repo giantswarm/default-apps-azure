@@ -4,11 +4,7 @@ name: default-apps-azure
 description: A Helm chart for default-apps-azure
 
 home: https://github.com/giantswarm/default-apps-azure
-
-# If you have an icon/logo, you should add it to https://github.com/giantswarm/web-assets
-# and set the final URL as a value here and uncomment.
-#icon: https://s.giantswarm.io/app-icons/example/1/light.svg
-
+icon: https://s.giantswarm.io/app-icons/azure/1/light.svg
 version: 0.0.0-dev # [[ .Version ]] if you're using architect instead of app-build-suite
 annotations:
   application.giantswarm.io/team: "clippy"
