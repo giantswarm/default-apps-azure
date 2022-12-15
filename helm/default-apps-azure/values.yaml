@@ -6,6 +6,7 @@ userConfig:
     configMap:
       values: |
         controller:
+          runOnMaster: true
           disableAvailabilitySetNodes: false
           masterNodeSelector:
             "kubernetes.io/role": null
