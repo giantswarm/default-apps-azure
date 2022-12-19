@@ -18,6 +18,21 @@ userConfig:
       values: |
         ipam:
           mode: kubernetes
+        #k8sServiceHost: api.{{ .Values.baseDomain }}
+        #k8sServicePort: 6443
+        #kubeProxyReplacement: strict
+        hubble:
+          relay:
+            enabled: true
+        defaultPolicies:
+          enabled: true
+          tolerations:
+            - effect: NoSchedule
+              operator: Exists
+            - effect: NoExecute
+              operator: Exists
+            - key: CriticalAddonsOnly
+              operator: Exists
 
 apps:
   azure-cloud-controller-manager:
@@ -56,6 +71,18 @@ apps:
     # used by renovate
     # repo: giantswarm/azuredisk-csi-driver-app
     version: 1.25.0-gs1
+  coreDNS:
+    appName: coredns
+    chartName: coredns-app
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: false
+    forceUpgrade: true
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/coredns-app
+    version: 1.12.0
   cilium:
     appName: cilium
     chartName: cilium
