@@ -2,6 +2,15 @@ clusterName: ""
 organization: ""
 
 userConfig:
+  azure-cloud-controller-manager:
+    configMap:
+      values: |
+        controller:
+          azureCredentialFile: /etc/kubernetes/azure.json
+          controlPlaneNodeSelector:
+            "kubernetes.io/role": null
+            "node-role.kubernetes.io/control-plane": '""'
+          kubeconfigFromHost: false
   azuredisk-csi-driver:
     configMap:
       values: |
@@ -46,7 +55,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azure-cloud-controller-manager-app
-    version: 1.24.5-gs1-9cbfc0eaaeced0c4807628ebe06f887597264104
+    version: 1.24.5-gs1-7300827711282485cb04b93b8a197f8cb097b2e6
   azure-cloud-node-manager:
     appName: azure-cloud-node-manager
     chartName: azure-cloud-node-manager-app
