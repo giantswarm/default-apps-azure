@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- add icon url to `Chart.yaml`
+- Add icon url to `Chart.yaml`
+- Add `values.yaml` json schema
 
 ## [0.0.2] - 2022-11-30
 
