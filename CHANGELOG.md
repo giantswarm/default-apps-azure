@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Adopt `labels` to align with other default-apps.
 - Prepare `cilium` default configuration for `CAPZ` based clusters.
 - Bump Azure `CPI` to latest version and overwrite default configuration for `CAPZ` based clusters.
 
