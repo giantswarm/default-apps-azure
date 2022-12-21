@@ -55,7 +55,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azure-cloud-controller-manager-app
-    version: 1.24.5-gs1-31ab18403753ffedd63974e884f5f1ecfa6bee6d
+    version: 1.24.5-gs1-d283c69b8e7d2751d41aba5e32253f107a5daaa3
   azure-cloud-node-manager:
     appName: azure-cloud-node-manager
     chartName: azure-cloud-node-manager-app
