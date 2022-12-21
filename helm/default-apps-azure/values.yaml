@@ -79,7 +79,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azuredisk-csi-driver-app
-    version: 1.25.0-gs1-0efcd6e0be32370f7bbdb6884aafc03b648a0fb2
+    version: 1.25.0-gs1-51874700885cd1ff2dca832ce0f5a2938194bb0f
   coreDNS:
     appName: coredns
     chartName: coredns-app
