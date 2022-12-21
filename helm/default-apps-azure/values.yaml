@@ -54,3 +54,15 @@ apps:
     # used by renovate
     # repo: giantswarm/cilium-app
     version: 0.6.0
+  coreDNS:
+    appName: coredns
+    chartName: coredns-app
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: false
+    forceUpgrade: true
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/coredns-app
+    version: 1.12.0
