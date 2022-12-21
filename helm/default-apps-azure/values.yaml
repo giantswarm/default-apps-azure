@@ -68,7 +68,7 @@ apps:
   azuredisk-csi-driver:
     appName: azuredisk-csi-driver
     chartName: azuredisk-csi-driver-app
-    catalog: default
+    catalog: default-test
     clusterValues:
       configMap: true
       secret: false
@@ -76,7 +76,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azuredisk-csi-driver-app
-    version: 1.25.1-gs1
+    version: 1.25.1-gs1-1ac9721f1dd11ce06e018d4d4fe36d6534cb6913
   cilium:
     appName: cilium
     chartName: cilium
