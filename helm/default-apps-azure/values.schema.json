@@ -84,6 +84,19 @@
         "userConfig": {
             "type": "object",
             "properties": {
+                "azure-cloud-controller-manager": {
+                    "type": "object",
+                    "properties": {
+                        "configMap": {
+                            "type": "object",
+                            "properties": {
+                                "values": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
                 "cilium": {
                     "type": "object",
                     "properties": {

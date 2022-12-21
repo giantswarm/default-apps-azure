@@ -2,6 +2,15 @@ clusterName: ""
 organization: ""
 
 userConfig:
+  azure-cloud-controller-manager:
+    configMap:
+      values: |
+        controller:
+          azureCredentialFile: /etc/kubernetes/azure.json
+          controlPlaneNodeSelector:
+            "kubernetes.io/role": null
+            "node-role.kubernetes.io/control-plane": '""'
+          kubeconfigFromHost: false
   cilium:
     configMap:
       values: |
@@ -32,7 +41,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azure-cloud-controller-manager-app
-    version: 1.24.5-gs1
+    version: 1.24.6-gs1
   cilium:
     appName: cilium
     chartName: cilium
