@@ -39,6 +39,40 @@
                         }
                     }
                 },
+                "azuredisk-csi-driver": {
+                    "type": "object",
+                    "properties": {
+                        "appName": {
+                            "type": "string"
+                        },
+                        "catalog": {
+                            "type": "string"
+                        },
+                        "chartName": {
+                            "type": "string"
+                        },
+                        "clusterValues": {
+                            "type": "object",
+                            "properties": {
+                                "configMap": {
+                                    "type": "boolean"
+                                },
+                                "secret": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "forceUpgrade": {
+                            "type": "boolean"
+                        },
+                        "namespace": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "type": "string"
+                        }
+                    }
+                },
                 "cilium": {
                     "type": "object",
                     "properties": {
@@ -119,6 +153,19 @@
             "type": "object",
             "properties": {
                 "azure-cloud-controller-manager": {
+                    "type": "object",
+                    "properties": {
+                        "configMap": {
+                            "type": "object",
+                            "properties": {
+                                "values": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "azuredisk-csi-driver": {
                     "type": "object",
                     "properties": {
                         "configMap": {

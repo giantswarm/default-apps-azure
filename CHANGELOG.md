@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- Add Azure `CSI` driver and overwrite default configuration for `CAPZ` based clusters.
 - Add `CoreDNS`.
 - Add icon url to `Chart.yaml`.
 - Add `values.yaml` json schema.
