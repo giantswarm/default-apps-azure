@@ -9,8 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Add icon url to `Chart.yaml`
-- Add `values.yaml` json schema
+- Add icon url to `Chart.yaml`.
+- Add `values.yaml` json schema.
+
+### Changed
+
+- Prepare `cilium` default configuration for `CAPZ` based clusters.
 
 ## [0.0.2] - 2022-11-30
 
