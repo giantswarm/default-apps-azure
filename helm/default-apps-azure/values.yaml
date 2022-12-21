@@ -55,11 +55,11 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azure-cloud-controller-manager-app
-    version: 1.24.5-gs1-d283c69b8e7d2751d41aba5e32253f107a5daaa3
+    version: 1.24.5-gs1-31ab18403753ffedd63974e884f5f1ecfa6bee6d
   azure-cloud-node-manager:
     appName: azure-cloud-node-manager
     chartName: azure-cloud-node-manager-app
-    catalog: default
+    catalog: default-test
     clusterValues:
       configMap: true
       secret: false
@@ -67,7 +67,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azure-cloud-node-manager-app
-    version: 1.24.5-gs1
+    version: 1.24.5-gs1-60692a3d177c24d39b488f57e327fe57855c3342
   azuredisk-csi-driver:
     appName: azuredisk-csi-driver
     chartName: azuredisk-csi-driver-app
@@ -79,7 +79,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azuredisk-csi-driver-app
-    version: 1.25.0-gs1-3fd3b09634ee86db1e2f48eb358791f24328d9eb
+    version: 1.25.0-gs1-0efcd6e0be32370f7bbdb6884aafc03b648a0fb2
   coreDNS:
     appName: coredns
     chartName: coredns-app
