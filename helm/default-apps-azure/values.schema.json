@@ -224,6 +224,19 @@
                             }
                         }
                     }
+                },
+                "coreDNS": {
+                    "type": "object",
+                    "properties": {
+                        "configMap": {
+                            "type": "object",
+                            "properties": {
+                                "values": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Configuration for `coredns` app to update nodeSelector of masters instance
+
 ## [0.0.4] - 2022-12-22
 
 ### Changed
