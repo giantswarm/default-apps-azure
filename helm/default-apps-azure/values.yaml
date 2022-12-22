@@ -92,7 +92,7 @@ apps:
   coreDNS:
     appName: coredns
     chartName: coredns-app
-    catalog: default
+    catalog: default-test
     clusterValues:
       configMap: true
       secret: false
@@ -100,4 +100,4 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/coredns-app
-    version: 1.12.0
+    version: 1.12.0-173d4aae85975215a6b76d09714f1f4d5ee3c917
