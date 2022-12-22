@@ -76,7 +76,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azuredisk-csi-driver-app
-    version: 1.25.1-gs1
+    version: 1.25.2-gs1
   cilium:
     appName: cilium
     chartName: cilium
