@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Update `azuredisk CSI` driver to 1.25.2-gs1
+- Run `coredns` from test catalog so we can have a working DNS on capz ( need to test it on all other environments first )
 
 ## [0.0.3] - 2022-12-21
 
