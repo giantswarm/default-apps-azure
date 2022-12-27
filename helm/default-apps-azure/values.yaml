@@ -39,6 +39,13 @@ userConfig:
               operator: Exists
             - key: CriticalAddonsOnly
               operator: Exists
+  coreDNS:
+    configMap:
+      values: |
+        mastersInstance:
+          nodeSelector:
+            "node-role.kubernetes.io/master": null
+            "node-role.kubernetes.io/control-plane": '""'
 
 apps:
   azure-cloud-controller-manager:
