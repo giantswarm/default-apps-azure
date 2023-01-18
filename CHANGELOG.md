@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add `kube-state-metrics`
+- Add `metrics-server`
+- Add `vertical-pod-autoscaler`
+
 ## [0.0.6] - 2022-12-28
 
 ### Changed
