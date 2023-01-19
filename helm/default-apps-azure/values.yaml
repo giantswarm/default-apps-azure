@@ -48,6 +48,18 @@ userConfig:
             "node-role.kubernetes.io/control-plane": '""'
 
 apps:
+  azure-ad-pod-identity:
+    appName: azure-ad-pod-identity
+    chartName: azure-ad-pod-identity-app
+    catalog: control-plane
+    clusterValues:
+      configMap: true
+      secret: false
+    forceUpgrade: false
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/azure-cloud-node-manager-app
+    version: 0.13.0
   azure-cloud-controller-manager:
     appName: azure-cloud-controller-manager
     chartName: azure-cloud-controller-manager-app
