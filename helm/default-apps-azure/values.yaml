@@ -51,7 +51,7 @@ apps:
   azure-ad-pod-identity:
     appName: azure-ad-pod-identity
     chartName: azure-ad-pod-identity-app
-    catalog: control-plane
+    catalog: control-plane-catalog
     clusterValues:
       configMap: true
       secret: false
