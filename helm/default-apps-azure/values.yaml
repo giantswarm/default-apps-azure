@@ -15,11 +15,7 @@ userConfig:
     configMap:
       values: |
         controller:
-          runOnMaster: true
           disableAvailabilitySetNodes: false
-          masterNodeSelector:
-            "kubernetes.io/role": null
-            "node-role.kubernetes.io/control-plane": '""'
         linux:
           azure_credential_file: /etc/kubernetes/azure.json
   cilium:
