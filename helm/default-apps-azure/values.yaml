@@ -80,6 +80,18 @@ apps:
     # used by renovate
     # repo: giantswarm/azuredisk-csi-driver-app
     version: 1.25.2-gs1
+  certExporter:
+    appName: cert-exporter
+    chartName: cert-exporter
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: false
+    forceUpgrade: true
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/cert-exporter
+    version: 2.3.1
   cilium:
     appName: cilium
     chartName: cilium
