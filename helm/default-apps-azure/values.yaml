@@ -43,6 +43,13 @@ userConfig:
             "node-role.kubernetes.io/master": null
             "node-role.kubernetes.io/control-plane": '""'
 
+  # What should we set here ? on Azure we get an hardware clock for chrony ntp
+  # netExporter:
+  #   configMap:
+  #     values: |
+  #       NetExporter:
+  #         NTPServers: 169.254.169.123
+
 apps:
   azure-cloud-controller-manager:
     appName: azure-cloud-controller-manager
@@ -140,6 +147,18 @@ apps:
     # used by renovate
     # repo: giantswarm/metrics-server-app
     version: 2.0.0
+  netExporter:
+    appName: net-exporter
+    chartName: net-exporter
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: false
+    forceUpgrade: true
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/net-exporter
+    version: 1.13.0
   observabilityBundle:
     appName: observability-bundle
     chartName: observability-bundle
