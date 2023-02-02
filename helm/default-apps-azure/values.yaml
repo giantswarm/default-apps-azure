@@ -44,6 +44,7 @@ userConfig:
             "node-role.kubernetes.io/control-plane": '""'
 
   # What should we set here ? on Azure we get an hardware clock for chrony ntp
+  # By default it uses flatcar ntp endpoints
   # netExporter:
   #   configMap:
   #     values: |
