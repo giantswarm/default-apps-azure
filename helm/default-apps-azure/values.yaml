@@ -43,6 +43,14 @@ userConfig:
             "node-role.kubernetes.io/master": null
             "node-role.kubernetes.io/control-plane": '""'
 
+  # What should we set here ? on Azure we get an hardware clock for chrony ntp
+  # By default it uses flatcar ntp endpoints
+  # netExporter:
+  #   configMap:
+  #     values: |
+  #       NetExporter:
+  #         NTPServers: 169.254.169.123
+
 apps:
   azure-cloud-controller-manager:
     appName: azure-cloud-controller-manager
@@ -80,6 +88,18 @@ apps:
     # used by renovate
     # repo: giantswarm/azuredisk-csi-driver-app
     version: 1.25.2-gs1
+  certExporter:
+    appName: cert-exporter
+    chartName: cert-exporter
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: false
+    forceUpgrade: true
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/cert-exporter
+    version: 2.3.1
   cilium:
     appName: cilium
     chartName: cilium
@@ -128,6 +148,30 @@ apps:
     # used by renovate
     # repo: giantswarm/metrics-server-app
     version: 2.0.0
+  netExporter:
+    appName: net-exporter
+    chartName: net-exporter
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: false
+    forceUpgrade: true
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/net-exporter
+    version: 1.13.0
+  nodeExporter:
+    appName: node-exporter
+    chartName: node-exporter-app
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: false
+    forceUpgrade: true
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/node-exporter-app
+    version: 1.15.0
   observabilityBundle:
     appName: observability-bundle
     chartName: observability-bundle
