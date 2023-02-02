@@ -43,6 +43,13 @@ userConfig:
             "node-role.kubernetes.io/master": null
             "node-role.kubernetes.io/control-plane": '""'
 
+  observabilityBundle:
+    configMap:
+      values: |
+        apps:
+          prometheus-agent:
+            enabled: false
+    
   # What should we set here ? on Azure we get an hardware clock for chrony ntp
   # By default it uses flatcar ntp endpoints
   # netExporter:
