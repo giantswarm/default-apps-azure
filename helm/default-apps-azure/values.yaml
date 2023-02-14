@@ -79,7 +79,7 @@ apps:
   azuredisk-csi-driver:
     appName: azuredisk-csi-driver
     chartName: azuredisk-csi-driver-app
-    catalog: default
+    catalog: default-test
     clusterValues:
       configMap: true
       secret: false
@@ -87,7 +87,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azuredisk-csi-driver-app
-    version: 1.25.2-gs1
+    version: 1.25.2-gs1-a87846c1fab1592eb4ece9eff0e59f70db77570e
   certExporter:
     appName: cert-exporter
     chartName: cert-exporter
