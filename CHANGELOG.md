@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.11] - 2023-02-15
+
 ## [0.0.10] - 2023-02-02
 
 ### Added
@@ -86,7 +88,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - changed `app.giantswarm.io` label group was changed to `application.giantswarm.io`
 
-[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.10...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.11...HEAD
+[0.0.11]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.10...v0.0.11
 [0.0.10]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.9...v0.0.10
 [0.0.9]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.8...v0.0.9
 [0.0.8]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.7...v0.0.8
