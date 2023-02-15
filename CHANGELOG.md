@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Bumped `azuredisk-csi-driver` to 1.26.2-gs1
+
 ## [0.0.10] - 2023-02-02
 
 ### Added
