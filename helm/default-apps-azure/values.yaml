@@ -127,7 +127,7 @@ apps:
   external-dns:
     appName: external-dns
     chartName: external-dns-app
-    catalog: default
+    catalog: default-test
     clusterValues:
       configMap: true
       secret: false
@@ -135,7 +135,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/external-dns-app
-    version: 1.13.0
+    version: 2.23.2-de2ffb5f3c4275cbfe95ba12d5fe454d13356677
   kubeStateMetrics:
     appName: kube-state-metrics
     chartName: kube-state-metrics
