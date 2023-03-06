@@ -124,6 +124,18 @@ apps:
     # used by renovate
     # repo: giantswarm/coredns-app
     version: 1.13.0
+  external-dns:
+    appName: external-dns
+    chartName: external-dns-app
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: false
+    forceUpgrade: true
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/external-dns-app
+    version: 1.13.0
   kubeStateMetrics:
     appName: kube-state-metrics
     chartName: kube-state-metrics
