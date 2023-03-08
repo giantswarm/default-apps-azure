@@ -120,7 +120,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/cilium-app
-    version: 0.6.1
+    version: 0.8.0
   coreDNS:
     appName: coredns
     chartName: coredns-app
