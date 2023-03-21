@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Bumped `vpa` to 3.3.0 and `vpaCRD` to 2.0.0
+
 ## [0.0.12] - 2023-03-07
 
 ### Added
