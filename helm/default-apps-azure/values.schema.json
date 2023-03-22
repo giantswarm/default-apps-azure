@@ -107,6 +107,40 @@
                         }
                     }
                 },
+                "certExporter": {
+                    "type": "object",
+                    "properties": {
+                        "appName": {
+                            "type": "string"
+                        },
+                        "catalog": {
+                            "type": "string"
+                        },
+                        "chartName": {
+                            "type": "string"
+                        },
+                        "clusterValues": {
+                            "type": "object",
+                            "properties": {
+                                "configMap": {
+                                    "type": "boolean"
+                                },
+                                "secret": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "forceUpgrade": {
+                            "type": "boolean"
+                        },
+                        "namespace": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "type": "string"
+                        }
+                    }
+                },
                 "cilium": {
                     "type": "object",
                     "properties": {
@@ -142,6 +176,40 @@
                     }
                 },
                 "coreDNS": {
+                    "type": "object",
+                    "properties": {
+                        "appName": {
+                            "type": "string"
+                        },
+                        "catalog": {
+                            "type": "string"
+                        },
+                        "chartName": {
+                            "type": "string"
+                        },
+                        "clusterValues": {
+                            "type": "object",
+                            "properties": {
+                                "configMap": {
+                                    "type": "boolean"
+                                },
+                                "secret": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "forceUpgrade": {
+                            "type": "boolean"
+                        },
+                        "namespace": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "external-dns": {
                     "type": "object",
                     "properties": {
                         "appName": {
@@ -243,6 +311,74 @@
                         }
                     }
                 },
+                "netExporter": {
+                    "type": "object",
+                    "properties": {
+                        "appName": {
+                            "type": "string"
+                        },
+                        "catalog": {
+                            "type": "string"
+                        },
+                        "chartName": {
+                            "type": "string"
+                        },
+                        "clusterValues": {
+                            "type": "object",
+                            "properties": {
+                                "configMap": {
+                                    "type": "boolean"
+                                },
+                                "secret": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "forceUpgrade": {
+                            "type": "boolean"
+                        },
+                        "namespace": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "nodeExporter": {
+                    "type": "object",
+                    "properties": {
+                        "appName": {
+                            "type": "string"
+                        },
+                        "catalog": {
+                            "type": "string"
+                        },
+                        "chartName": {
+                            "type": "string"
+                        },
+                        "clusterValues": {
+                            "type": "object",
+                            "properties": {
+                                "configMap": {
+                                    "type": "boolean"
+                                },
+                                "secret": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "forceUpgrade": {
+                            "type": "boolean"
+                        },
+                        "namespace": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "type": "string"
+                        }
+                    }
+                },
                 "observabilityBundle": {
                     "type": "object",
                     "properties": {
@@ -269,6 +405,9 @@
                         "forceUpgrade": {
                             "type": "boolean"
                         },
+                        "inCluster": {
+                            "type": "boolean"
+                        },
                         "namespace": {
                             "type": "string"
                         },
@@ -277,7 +416,7 @@
                         }
                     }
                 },
-                "vertical-pod-autoscaler": {
+                "vpa": {
                     "type": "object",
                     "properties": {
                         "appName": {
@@ -289,16 +428,8 @@
                         "chartName": {
                             "type": "string"
                         },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
+                        "dependsOn": {
+                            "type": "string"
                         },
                         "forceUpgrade": {
                             "type": "boolean"
@@ -311,7 +442,7 @@
                         }
                     }
                 },
-                "vertical-pod-autoscaler-crd": {
+                "vpaCRD": {
                     "type": "object",
                     "properties": {
                         "appName": {
@@ -322,17 +453,6 @@
                         },
                         "chartName": {
                             "type": "string"
-                        },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
                         },
                         "forceUpgrade": {
                             "type": "boolean"
@@ -396,6 +516,19 @@
                     }
                 },
                 "coreDNS": {
+                    "type": "object",
+                    "properties": {
+                        "configMap": {
+                            "type": "object",
+                            "properties": {
+                                "values": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "external-dns": {
                     "type": "object",
                     "properties": {
                         "configMap": {

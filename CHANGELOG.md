@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Bumped `vpa` to 3.3.0 and `vpaCRD` to 2.0.0
 
+### Added
+
+- New app dependency mechanism (`app-operator.giantswarm.io/depends-on`) to the vertical-pod-autoscaler-app it is not installed until the corresponding CRD app is deployed.
+
 ## [0.0.12] - 2023-03-07
 
 ### Added
