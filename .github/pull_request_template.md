@@ -41,3 +41,11 @@ Changelog must always be updated.
 
 - [ ] Update changelog in CHANGELOG.md.
 - [ ] Make sure `values.yaml` and `values.schema.json` are valid.
+
+### Trigger e2e tests
+
+<!--
+If for some reason you want to skip the e2e tests, remove the following lines.
+-->
+
+/run cluster-test-suites
