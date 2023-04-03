@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Update `Cilium Values` to enable `kube-proxy-replacement` 
+  - This change also require `cluster-azure` app >= 0.0.17
+
 ## [0.0.13] - 2023-03-22
 
 ### Changed
