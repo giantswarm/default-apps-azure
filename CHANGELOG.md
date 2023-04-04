@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Fix rendering of api server name for cilium to not include the cluster name twice
+
 ## [0.0.14] - 2023-04-04
 
 ### Changed
