@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.15] - 2023-04-05
+
 ### Changed
 
 - :boom: Reverting the `cilium kube-proxy replacement` feature because it is breaking NMI
@@ -119,7 +121,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - changed `app.giantswarm.io` label group was changed to `application.giantswarm.io`
 
-[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.14...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.15...HEAD
+[0.0.15]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.14...v0.0.15
 [0.0.14]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.13...v0.0.14
 [0.0.13]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.12...v0.0.13
 [0.0.12]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.11...v0.0.12
