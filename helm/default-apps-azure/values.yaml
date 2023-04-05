@@ -23,9 +23,6 @@ userConfig:
       values: |
         ipam:
           mode: kubernetes
-        k8sServiceHost: api.{{ .Values.clusterName }}.{{ .Values.baseDomain }}
-        k8sServicePort: "6443"
-        kubeProxyReplacement: strict
         hubble:
           relay:
             enabled: true
