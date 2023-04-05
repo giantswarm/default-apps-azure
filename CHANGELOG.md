@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- :boom: Reverting the `cilium kube-proxy replacement` feature because it is breaking NMI
+
 ## [0.0.14] - 2023-04-04
 
 ### Changed
