@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Update `vertical-pod-autoscaler-app` to 3.4.1 to address PDB on single replicas pods issue
+
 ## [0.0.15] - 2023-04-05
 
 ### Changed
