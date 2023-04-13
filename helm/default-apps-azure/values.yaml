@@ -145,18 +145,6 @@ apps:
     # used by renovate
     # repo: giantswarm/external-dns-app
     version: 2.33.0
-  kubeStateMetrics:
-    appName: kube-state-metrics
-    chartName: kube-state-metrics
-    catalog: default
-    clusterValues:
-      configMap: true
-      secret: false
-    forceUpgrade: true
-    namespace: kube-system
-    # used by renovate
-    # repo: giantswarm/kube-state-metrics-app
-    version: 1.14.2
   metricsServer:
     appName: metrics-server
     chartName: metrics-server-app
@@ -205,7 +193,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/observability-bundle
-    version: 0.2.0
+    version: 0.4.0
   vpa:
     appName: vertical-pod-autoscaler
     chartName: vertical-pod-autoscaler-app
