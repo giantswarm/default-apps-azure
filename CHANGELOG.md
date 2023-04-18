@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.16] - 2023-04-18
+
 ### Changed
 
 - Update `vertical-pod-autoscaler-app` to 3.4.1 to address PDB on single replicas pods issue
@@ -130,7 +132,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - changed `app.giantswarm.io` label group was changed to `application.giantswarm.io`
 
-[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.15...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.16...HEAD
+[0.0.16]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.15...v0.0.16
 [0.0.15]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.14...v0.0.15
 [0.0.14]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.13...v0.0.14
 [0.0.13]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.12...v0.0.13
