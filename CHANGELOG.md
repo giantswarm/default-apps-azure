@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Update `vertical-pod-autoscaler-app` to 3.4.1 to address PDB on single replicas pods issue
-- Bump `observability-bundle` to 0.4.0
+- Bump `observability-bundle` to 0.4.1
 
 ### Removed
 
