@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bump `observability-bundle` to 0.4.2
 - :boom: Breaking - Update `Cilium Values` to enable `kube-proxy-replacement` 
   - This change also require `cluster-azure` app >= 0.0.21
+- Bump `cilium-app` to 0.9.3
 
 ## [0.0.16] - 2023-04-18
 
