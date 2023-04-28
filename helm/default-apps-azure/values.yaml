@@ -132,7 +132,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/coredns-app
-    version: 1.14.2
+    version: 1.15.2
   external-dns:
     appName: external-dns
     chartName: external-dns-app
