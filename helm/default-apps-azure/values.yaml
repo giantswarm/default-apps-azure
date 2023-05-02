@@ -24,7 +24,7 @@ userConfig:
         ipam:
           mode: kubernetes
         # For WC the basedomain rendering of the ConfigMap does not include the clusterName but it does for MC
-        k8sServiceHost: api.{{ "" (printf "%s." .Values.clusterName) (eq .Values.clusterName .Values.managementCluster) }}{{ .Values.baseDomain }}
+        k8sServiceHost: api.{{ '' (printf '%s.' .Values.clusterName) (eq .Values.clusterName .Values.managementCluster) }}{{ .Values.baseDomain }}
         k8sServicePort: "6443"
         kubeProxyReplacement: strict
         hubble:
