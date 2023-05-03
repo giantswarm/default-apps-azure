@@ -2,47 +2,6 @@ clusterName: ""
 organization: ""
 
 userConfig:
-  azure-cloud-controller-manager:
-    configMap:
-      values: |
-        controller:
-          azureCredentialFile: /etc/kubernetes/azure.json
-          controlPlaneNodeSelector:
-            "kubernetes.io/role": null
-            "node-role.kubernetes.io/control-plane": '""'
-          kubeconfigFromHost: false
-  azuredisk-csi-driver:
-    configMap:
-      values: |
-        controller:
-          disableAvailabilitySetNodes: false
-        linux:
-          azure_credential_file: /etc/kubernetes/azure.json
-  cilium:
-    configMap:
-      values: |
-        ipam:
-          mode: kubernetes
-        hubble:
-          relay:
-            enabled: true
-        defaultPolicies:
-          enabled: true
-          tolerations:
-            - effect: NoSchedule
-              operator: Exists
-            - effect: NoExecute
-              operator: Exists
-            - key: CriticalAddonsOnly
-              operator: Exists
-  coreDNS:
-    configMap:
-      values: |
-        mastersInstance:
-          nodeSelector:
-            "node-role.kubernetes.io/master": null
-            "node-role.kubernetes.io/control-plane": '""'
-
   external-dns:
     configMap:
       values: |
@@ -61,42 +20,6 @@ userConfig:
   #         NTPServers: 169.254.169.123
 
 apps:
-  azure-cloud-controller-manager:
-    appName: azure-cloud-controller-manager
-    chartName: azure-cloud-controller-manager-app
-    catalog: default
-    clusterValues:
-      configMap: true
-      secret: false
-    forceUpgrade: false
-    namespace: kube-system
-    # used by renovate
-    # repo: giantswarm/azure-cloud-controller-manager-app
-    version: 1.24.6-gs1
-  azure-cloud-node-manager:
-    appName: azure-cloud-node-manager
-    chartName: azure-cloud-node-manager-app
-    catalog: default
-    clusterValues:
-      configMap: true
-      secret: false
-    forceUpgrade: false
-    namespace: kube-system
-    # used by renovate
-    # repo: giantswarm/azure-cloud-node-manager-app
-    version: 1.24.6-gs1
-  azuredisk-csi-driver:
-    appName: azuredisk-csi-driver
-    chartName: azuredisk-csi-driver-app
-    catalog: default
-    clusterValues:
-      configMap: true
-      secret: false
-    forceUpgrade: false
-    namespace: kube-system
-    # used by renovate
-    # repo: giantswarm/azuredisk-csi-driver-app
-    version: 1.26.2-gs1
   certExporter:
     appName: cert-exporter
     chartName: cert-exporter
@@ -109,30 +32,6 @@ apps:
     # used by renovate
     # repo: giantswarm/cert-exporter
     version: 2.3.1
-  cilium:
-    appName: cilium
-    chartName: cilium
-    catalog: default
-    clusterValues:
-      configMap: true
-      secret: false
-    forceUpgrade: true
-    namespace: kube-system
-    # used by renovate
-    # repo: giantswarm/cilium-app
-    version: 0.6.1
-  coreDNS:
-    appName: coredns
-    chartName: coredns-app
-    catalog: default
-    clusterValues:
-      configMap: true
-      secret: false
-    forceUpgrade: true
-    namespace: kube-system
-    # used by renovate
-    # repo: giantswarm/coredns-app
-    version: 1.15.2
   external-dns:
     appName: external-dns
     chartName: external-dns-app
