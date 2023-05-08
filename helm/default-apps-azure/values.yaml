@@ -96,7 +96,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azuredisk-csi-driver-app
-    version: 1.26.2-gs1
+    version: 1.26.2-gs2
   certExporter:
     appName: cert-exporter
     chartName: cert-exporter
@@ -108,7 +108,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/cert-exporter
-    version: 2.3.1
+    version: 2.5.1
   cilium:
     appName: cilium
     chartName: cilium
@@ -132,7 +132,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/coredns-app
-    version: 1.15.2
+    version: 1.16.0
   external-dns:
     appName: external-dns
     chartName: external-dns-app
@@ -156,7 +156,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/metrics-server-app
-    version: 2.0.0
+    version: 2.2.0
   netExporter:
     appName: net-exporter
     chartName: net-exporter
@@ -168,7 +168,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/net-exporter
-    version: 1.13.0
+    version: 1.15.0
   nodeExporter:
     appName: node-exporter
     chartName: node-exporter-app
@@ -180,7 +180,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/node-exporter-app
-    version: 1.15.0
+    version: 1.16.0
   observabilityBundle:
     appName: observability-bundle
     chartName: observability-bundle
