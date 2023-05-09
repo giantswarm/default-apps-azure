@@ -64,7 +64,7 @@ apps:
   azure-cloud-controller-manager:
     appName: azure-cloud-controller-manager
     chartName: azure-cloud-controller-manager-app
-    catalog: default
+    catalog: default-test
     clusterValues:
       configMap: true
       secret: false
@@ -72,11 +72,11 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azure-cloud-controller-manager-app
-    version: 1.24.6-gs1
+    version: 1.24.18-gs1-d6fac690d57601c2df6ed7883cd2adf5e0a355cb
   azure-cloud-node-manager:
     appName: azure-cloud-node-manager
     chartName: azure-cloud-node-manager-app
-    catalog: default
+    catalog: default-test
     clusterValues:
       configMap: true
       secret: false
@@ -84,11 +84,11 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azure-cloud-node-manager-app
-    version: 1.24.6-gs1
+    version: 1.24.18-gs1-a9651b3c53d47cdf48109b6967e2bec0cd68784a
   azuredisk-csi-driver:
     appName: azuredisk-csi-driver
     chartName: azuredisk-csi-driver-app
-    catalog: default
+    catalog: default-test
     clusterValues:
       configMap: true
       secret: false
@@ -96,7 +96,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azuredisk-csi-driver-app
-    version: 1.26.2-gs2
+    version: 1.26.2-gs2-5e72ec306f79bf28f7777063f186fcdaa35d59c3
   certExporter:
     appName: cert-exporter
     chartName: cert-exporter
