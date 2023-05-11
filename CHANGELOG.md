@@ -10,6 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Bump `observability-bundle` to 0.4.2
+- Bump `vertical-pod-autoscaler` to 3.4.2
+- Bump `node-exporter` to 1.16.0
+- Bump `net-exporter` to 1.15.0
+- Bump `metrics-server` to 2.2.0
+- Bump `cert-exporter` to 2.5.1
+- Bump `azuredisk-csi-driver` to 1.26.2-gs2
+- Bump `coredns-app` to 1.16.0
+  - Remove custom nodeSelector for coredns since is no longer required
 
 ## [0.0.16] - 2023-04-18
 
