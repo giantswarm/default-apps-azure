@@ -23,6 +23,10 @@ userConfig:
       values: |
         ipam:
           mode: kubernetes
+        # baseDomain **must be Fully qualified** `CLUSTER_NAME.azuretest.gigantic.io`
+        k8sServiceHost: apiserver.{{ .Values.baseDomain }}
+        k8sServicePort: "6443"
+        kubeProxyReplacement: strict
         hubble:
           relay:
             enabled: true
@@ -113,7 +117,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/cilium-app
-    version: 0.6.1
+    version: 0.9.3
   coreDNS:
     appName: coredns
     chartName: coredns-app
