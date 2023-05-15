@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.17] - 2023-05-15
+
 ### Changed
 
 - Bump `observability-bundle` to 0.4.2
@@ -146,7 +148,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - changed `app.giantswarm.io` label group was changed to `application.giantswarm.io`
 
-[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.16...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.17...HEAD
+[0.0.17]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.16...v0.0.17
 [0.0.16]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.15...v0.0.16
 [0.0.15]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.14...v0.0.15
 [0.0.14]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.13...v0.0.14
