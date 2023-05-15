@@ -23,9 +23,8 @@ userConfig:
       values: |
         ipam:
           mode: kubernetes
-        # The value of baseDomain is not consistent between MC and WC - until we fix that we need to add the cluster name when the value is being redenred for a WC
-        # see https://github.com/giantswarm/giantswarm/issues/25360#issuecomment-1531221382
-        k8sServiceHost: apiserver.{{ternary "" (print .Values.clusterName ".") (eq .Values.clusterName .Values.managementCluster)}}{{ .Values.baseDomain }}
+        # baseDomain **must be Fully qualified** `CLUSTER_NAME.azuretest.gigantic.io` 
+        k8sServiceHost: apiserver.{{ .Values.baseDomain }}
         k8sServicePort: "6443"
         kubeProxyReplacement: strict
         hubble:
