@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bump `azure-cloud-node-manager` to 1.24.18-gs3
 - Bump `observability-bundle` to 0.5.1
 - Bump `azuredisk-csi-driver` to 1.26.2-gs3
+- Bump `external-dns` to 2.37.0
 
 ## [0.0.17] - 2023-05-15
 
