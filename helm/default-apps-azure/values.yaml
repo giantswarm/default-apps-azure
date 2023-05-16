@@ -141,7 +141,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/external-dns-app
-    version: 2.33.0
+    version: 2.37.0
   metricsServer:
     appName: metrics-server
     chartName: metrics-server-app
