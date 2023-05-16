@@ -93,7 +93,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/azuredisk-csi-driver-app
-    version: 1.26.2-gs2
+    version: 1.26.2-gs4
   certExporter:
     appName: cert-exporter
     chartName: cert-exporter
