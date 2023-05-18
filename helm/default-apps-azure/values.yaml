@@ -55,20 +55,21 @@ userConfig:
     configMap:
       values: |
         vertical-pod-autoscaler:
-          podSecurityContext:
-            runAsNonRoot: true
-            runAsUser: 65534
-          securityContext: null
-        recommender:
-          podSecurityContext:
-            runAsNonRoot: true
-            runAsUser: 65534
-          securityContext: null
-        updater:
-          podSecurityContext:
-            runAsNonRoot: true
-            runAsUser: 65534
-          securityContext: null
+          admissionController:
+            podSecurityContext:
+              runAsNonRoot: true
+              runAsUser: 65534
+            securityContext: null
+          recommender:
+            podSecurityContext:
+              runAsNonRoot: true
+              runAsUser: 65534
+            securityContext: null
+          updater:
+            podSecurityContext:
+              runAsNonRoot: true
+              runAsUser: 65534
+            securityContext: null
 
 apps:
   azure-cloud-controller-manager:
