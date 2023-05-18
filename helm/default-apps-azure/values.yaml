@@ -49,13 +49,13 @@ userConfig:
         crd:
           install: false
 
-  # What should we set here ? on Azure we get an hardware clock for chrony ntp
-  # By default it uses flatcar ntp endpoints
-  # netExporter:
-  #   configMap:
-  #     values: |
-  #       NetExporter:
-  #         NTPServers: 169.254.169.123
+  vpa:
+    configMap:
+      values: |
+        podSecurityContext:
+          runAsNonRoot: true
+          runAsUser: 65534
+        securityContext: null
 
 apps:
   azure-cloud-controller-manager:
@@ -195,6 +195,9 @@ apps:
     appName: vertical-pod-autoscaler
     chartName: vertical-pod-autoscaler-app
     catalog: default
+    clusterValues:
+      configMap: true
+      secret: false
     dependsOn: vertical-pod-autoscaler-crd
     forceUpgrade: false
     namespace: kube-system
