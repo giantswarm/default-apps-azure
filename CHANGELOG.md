@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- :boom: Disable `Seccomp` for VPA since is preventing pods from starting
+  - This will be reverted once the problem is fixed
+
 ## [0.0.18] - 2023-05-17
 
 ### Changed

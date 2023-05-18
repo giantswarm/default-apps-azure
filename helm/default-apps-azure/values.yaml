@@ -49,6 +49,8 @@ userConfig:
         crd:
           install: false
 
+  # Disable SECCOMP for VPA since it prevents pods from starting - TO BE REVERTED
+  # https://gigantic.slack.com/archives/C01176DKNP4/p1684395585121689
   vpa:
     configMap:
       values: |
