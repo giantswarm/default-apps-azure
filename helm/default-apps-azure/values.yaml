@@ -54,10 +54,21 @@ userConfig:
   vpa:
     configMap:
       values: |
-        podSecurityContext:
-          runAsNonRoot: true
-          runAsUser: 65534
-        securityContext: null
+        vertical-pod-autoscaler:
+          podSecurityContext:
+            runAsNonRoot: true
+            runAsUser: 65534
+          securityContext: null
+        recommender:
+          podSecurityContext:
+            runAsNonRoot: true
+            runAsUser: 65534
+          securityContext: null
+        updater:
+          podSecurityContext:
+            runAsNonRoot: true
+            runAsUser: 65534
+          securityContext: null
 
 apps:
   azure-cloud-controller-manager:
