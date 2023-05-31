@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.20] - 2023-05-31
+
 ### Changed
 
 - Bump `azure-cloud-controller-manager` to 1.24.18-gs4
