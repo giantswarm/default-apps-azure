@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Remove workaround for VPA Seccomp 
+  - requires PSP from `cluster-shared v0.6.5`
 - Bump `azure-cloud-controller-manager` to 1.24.18-gs4
   - Remove custom nodeSelector 
 
