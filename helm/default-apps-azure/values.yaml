@@ -46,31 +46,6 @@ userConfig:
         crd:
           install: false
 
-  # Disable SECCOMP for VPA since it prevents pods from starting - TO BE REVERTED
-  # https://gigantic.slack.com/archives/C01176DKNP4/p1684395585121689
-  vpa:
-    configMap:
-      values: |
-        vertical-pod-autoscaler:
-          admissionController:
-            podSecurityContext:
-              runAsNonRoot: true
-              runAsUser: 65534
-              seccompProfile: null
-            securityContext: null
-          recommender:
-            podSecurityContext:
-              runAsNonRoot: true
-              runAsUser: 65534
-              seccompProfile: null
-            securityContext: null
-          updater:
-            podSecurityContext:
-              runAsNonRoot: true
-              runAsUser: 65534
-              seccompProfile: null
-            securityContext: null
-
 apps:
   azure-cloud-controller-manager:
     appName: azure-cloud-controller-manager
