@@ -94,7 +94,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/cert-exporter
-    version: 2.5.1
+    version: 2.6.0
   cilium:
     appName: cilium
     chartName: cilium
