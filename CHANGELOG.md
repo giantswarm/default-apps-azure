@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - requires PSP from `cluster-shared v0.6.5` which ships with `cluster-azure 0.0.23`
 - Bump `azure-cloud-controller-manager` to 1.24.18-gs4
   - Remove custom nodeSelector 
+- Bump `cert-exporter` to 2.6.0
 
 ## [0.0.19] - 2023-05-18
 
