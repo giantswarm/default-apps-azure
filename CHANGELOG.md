@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Add `cert-manager` app to default-apps-azure with version `2.21.0`
+
 ## [0.0.21] - 2023-06-01
 
 ### Changed

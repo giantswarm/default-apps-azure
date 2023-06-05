@@ -15,6 +15,17 @@ userConfig:
           disableAvailabilitySetNodes: false
         linux:
           azure_credential_file: /etc/kubernetes/azure.json
+  certManager:
+    configMap:
+      values: |
+        controller:
+          extraArgs:
+            # cert-manager's DNS01 solver by default tries to reach authoritative nameservers directly, using
+            # their public IPs. Since those are not reachable from private clusters, we instead rely on the
+            # recursive nameserver
+            #
+            # For public clusters, this setting should have no effect, as they can use the HTTP01 solver.
+            - --dns01-recursive-nameservers-only
   cilium:
     configMap:
       values: |
@@ -95,6 +106,18 @@ apps:
     # used by renovate
     # repo: giantswarm/cert-exporter
     version: 2.6.0
+  certManager:
+    appName: cert-manager
+    chartName: cert-manager-app
+    catalog: default
+    clusterValues:
+      configMap: true
+      secret: true
+    forceUpgrade: true
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/cert-manager-app
+    version: 2.21.0
   cilium:
     appName: cilium
     chartName: cilium
