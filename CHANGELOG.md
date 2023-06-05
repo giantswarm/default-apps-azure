@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Add `cert-manager` app to default-apps-azure with version `2.21.0`
+- bump `cilium` to version `0.10.0`
+  - Add PDB for `cilium-operator`
 
 ## [0.0.21] - 2023-06-01
 
