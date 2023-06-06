@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Add `cert-manager` app to default-apps-azure with version `2.21.0`
+- Bump `cilium-app` to 0.10.0 - Renovate
 
 ## [0.0.21] - 2023-06-01
 
@@ -19,6 +20,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - requires PSP from `cluster-shared v0.6.5` which ships with `cluster-azure 0.0.23`
 - Bump `cert-exporter` to 2.6.0
 - Bump `net-exporter` to 1.16.0
+- Bump `observability-bundle` to 0.6.0 - Renovate
+- Bump `core-dns-app` to 1.17.0 - Renovatge
 
 ## [0.0.20] - 2023-05-31
 
