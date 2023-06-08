@@ -206,7 +206,7 @@ apps:
   vpa:
     appName: vertical-pod-autoscaler
     chartName: vertical-pod-autoscaler-app
-    catalog: default
+    catalog: default-test
     clusterValues:
       configMap: true
       secret: false
@@ -215,7 +215,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/vertical-pod-autoscaler-app
-    version: 3.4.2
+    version: 3.4.2-0a93d2a907d60b9876384b7042226d1fa7c7fc0e
   vpaCRD:
     appName: vertical-pod-autoscaler-crd
     chartName: vertical-pod-autoscaler-crd
