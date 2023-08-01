@@ -7,9 +7,75 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.23] - 2023-07-31
+
+### Added
+
+- Add `etcd-kubernetes-resources-count-exporter`.
+- Update `cert-manager-app` values in preparation of v3.0.0 release.
+
+### Changed
+
+- Change etcd prefix for `etcd-kubernetes-resources-count-exporter`.
+
+## [0.0.22] - 2023-06-06
+
+### Changed
+
+- Add `cert-manager` app to default-apps-azure with version `2.21.0`
+- Bump `cilium-app` to 0.10.0 - Renovate
+
+## [0.0.21] - 2023-06-01
+
+### Changed
+
+- :boom: Remove workaround for VPA Seccomp 
+  - requires PSP from `cluster-shared v0.6.5` which ships with `cluster-azure 0.0.23`
+- Bump `cert-exporter` to 2.6.0
+- Bump `net-exporter` to 1.16.0
+- Bump `observability-bundle` to 0.6.0 - Renovate
+- Bump `core-dns-app` to 1.17.0 - Renovatge
+
+## [0.0.20] - 2023-05-31
+
+### Changed
+
+- Bump `azure-cloud-controller-manager` to 1.24.18-gs4
+  - Remove custom nodeSelector 
+
+## [0.0.19] - 2023-05-18
+
+### Changed
+
+- :boom: Disable `Seccomp` for VPA since is preventing pods from starting
+  - This will be reverted once the problem is fixed
+
+## [0.0.18] - 2023-05-17
+
+### Changed
+
+- Bump `azure-cloud-controller-manager` to 1.24.18-gs3
+- Bump `azure-cloud-node-manager` to 1.24.18-gs3
+- Bump `observability-bundle` to 0.5.1
+- Bump `azuredisk-csi-driver` to 1.26.2-gs3
+- Bump `external-dns` to 2.37.0
+
+## [0.0.17] - 2023-05-15
+
 ### Changed
 
 - Bump `observability-bundle` to 0.4.2
+- :boom: Breaking - Update `Cilium Values` to enable `kube-proxy-replacement` 
+  - This change also require `cluster-azure` app >= 0.0.21
+- Bump `cilium-app` to 0.9.3
+- Bump `vertical-pod-autoscaler` to 3.4.2
+- Bump `node-exporter` to 1.16.0
+- Bump `net-exporter` to 1.15.0
+- Bump `metrics-server` to 2.2.0
+- Bump `cert-exporter` to 2.5.1
+- Bump `azuredisk-csi-driver` to 1.26.2-gs2
+- Bump `coredns-app` to 1.16.0
+  - Remove custom nodeSelector for coredns since is no longer required
 
 ## [0.0.16] - 2023-04-18
 
@@ -135,7 +201,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - changed `app.giantswarm.io` label group was changed to `application.giantswarm.io`
 
-[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.16...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.23...HEAD
+[0.0.23]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.22...v0.0.23
+[0.0.22]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.21...v0.0.22
+[0.0.21]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.20...v0.0.21
+[0.0.20]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.19...v0.0.20
+[0.0.19]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.18...v0.0.19
+[0.0.18]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.17...v0.0.18
+[0.0.17]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.16...v0.0.17
 [0.0.16]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.15...v0.0.16
 [0.0.15]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.14...v0.0.15
 [0.0.14]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.13...v0.0.14
