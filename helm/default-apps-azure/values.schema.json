@@ -5,108 +5,6 @@
         "apps": {
             "type": "object",
             "properties": {
-                "azure-cloud-controller-manager": {
-                    "type": "object",
-                    "properties": {
-                        "appName": {
-                            "type": "string"
-                        },
-                        "catalog": {
-                            "type": "string"
-                        },
-                        "chartName": {
-                            "type": "string"
-                        },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
-                        },
-                        "forceUpgrade": {
-                            "type": "boolean"
-                        },
-                        "namespace": {
-                            "type": "string"
-                        },
-                        "version": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "azure-cloud-node-manager": {
-                    "type": "object",
-                    "properties": {
-                        "appName": {
-                            "type": "string"
-                        },
-                        "catalog": {
-                            "type": "string"
-                        },
-                        "chartName": {
-                            "type": "string"
-                        },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
-                        },
-                        "forceUpgrade": {
-                            "type": "boolean"
-                        },
-                        "namespace": {
-                            "type": "string"
-                        },
-                        "version": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "azuredisk-csi-driver": {
-                    "type": "object",
-                    "properties": {
-                        "appName": {
-                            "type": "string"
-                        },
-                        "catalog": {
-                            "type": "string"
-                        },
-                        "chartName": {
-                            "type": "string"
-                        },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
-                        },
-                        "forceUpgrade": {
-                            "type": "boolean"
-                        },
-                        "namespace": {
-                            "type": "string"
-                        },
-                        "version": {
-                            "type": "string"
-                        }
-                    }
-                },
                 "certExporter": {
                     "type": "object",
                     "properties": {
@@ -142,74 +40,6 @@
                     }
                 },
                 "certManager": {
-                    "type": "object",
-                    "properties": {
-                        "appName": {
-                            "type": "string"
-                        },
-                        "catalog": {
-                            "type": "string"
-                        },
-                        "chartName": {
-                            "type": "string"
-                        },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
-                        },
-                        "forceUpgrade": {
-                            "type": "boolean"
-                        },
-                        "namespace": {
-                            "type": "string"
-                        },
-                        "version": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "cilium": {
-                    "type": "object",
-                    "properties": {
-                        "appName": {
-                            "type": "string"
-                        },
-                        "catalog": {
-                            "type": "string"
-                        },
-                        "chartName": {
-                            "type": "string"
-                        },
-                        "clusterValues": {
-                            "type": "object",
-                            "properties": {
-                                "configMap": {
-                                    "type": "boolean"
-                                },
-                                "secret": {
-                                    "type": "boolean"
-                                }
-                            }
-                        },
-                        "forceUpgrade": {
-                            "type": "boolean"
-                        },
-                        "namespace": {
-                            "type": "string"
-                        },
-                        "version": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "coreDNS": {
                     "type": "object",
                     "properties": {
                         "appName": {
@@ -473,32 +303,6 @@
                                 }
                             }
                         },
-                        "dependsOn": {
-                            "type": "string"
-                        },
-                        "forceUpgrade": {
-                            "type": "boolean"
-                        },
-                        "namespace": {
-                            "type": "string"
-                        },
-                        "version": {
-                            "type": "string"
-                        }
-                    }
-                },
-                "vpaCRD": {
-                    "type": "object",
-                    "properties": {
-                        "appName": {
-                            "type": "string"
-                        },
-                        "catalog": {
-                            "type": "string"
-                        },
-                        "chartName": {
-                            "type": "string"
-                        },
                         "forceUpgrade": {
                             "type": "boolean"
                         },
@@ -521,46 +325,7 @@
         "userConfig": {
             "type": "object",
             "properties": {
-                "azure-cloud-controller-manager": {
-                    "type": "object",
-                    "properties": {
-                        "configMap": {
-                            "type": "object",
-                            "properties": {
-                                "values": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    }
-                },
-                "azuredisk-csi-driver": {
-                    "type": "object",
-                    "properties": {
-                        "configMap": {
-                            "type": "object",
-                            "properties": {
-                                "values": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    }
-                },
                 "certManager": {
-                    "type": "object",
-                    "properties": {
-                        "configMap": {
-                            "type": "object",
-                            "properties": {
-                                "values": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    }
-                },
-                "cilium": {
                     "type": "object",
                     "properties": {
                         "configMap": {
