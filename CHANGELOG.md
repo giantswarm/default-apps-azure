@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- :boom: Migrate CNI / CPI / CSI and VPA CRD apps to helmreleases to cluster-azure - requires `cluster-azure-app` 0.0.29
+
 ## [0.0.23] - 2023-07-31
 
 ### Added

@@ -2,19 +2,6 @@ clusterName: ""
 organization: ""
 
 userConfig:
-  azure-cloud-controller-manager:
-    configMap:
-      values: |
-        controller:
-          azureCredentialFile: /etc/kubernetes/azure.json
-          kubeconfigFromHost: false
-  azuredisk-csi-driver:
-    configMap:
-      values: |
-        controller:
-          disableAvailabilitySetNodes: false
-        linux:
-          azure_credential_file: /etc/kubernetes/azure.json
   certManager:
     configMap:
       values: |
@@ -34,28 +21,6 @@ userConfig:
         #
         # For public clusters, this setting should have no effect, as they can use the HTTP01 solver.
         dns01RecursiveNameserversOnly: true
-  cilium:
-    configMap:
-      values: |
-        ipam:
-          mode: kubernetes
-        # baseDomain **must be Fully qualified** `CLUSTER_NAME.azuretest.gigantic.io`
-        k8sServiceHost: apiserver.{{ .Values.baseDomain }}
-        k8sServicePort: "6443"
-        kubeProxyReplacement: strict
-        hubble:
-          relay:
-            enabled: true
-        defaultPolicies:
-          enabled: true
-          tolerations:
-            - effect: NoSchedule
-              operator: Exists
-            - effect: NoExecute
-              operator: Exists
-            - key: CriticalAddonsOnly
-              operator: Exists
-
   etcdKubernetesResourceCountExporter:
     configMap:
       values: |
@@ -67,7 +32,6 @@ userConfig:
           prefix: "/registry/"
         events:
           prefix: "/registry/events/"
-
   external-dns:
     configMap:
       values: |
@@ -78,42 +42,6 @@ userConfig:
           install: false
 
 apps:
-  azure-cloud-controller-manager:
-    appName: azure-cloud-controller-manager
-    chartName: azure-cloud-controller-manager-app
-    catalog: default
-    clusterValues:
-      configMap: true
-      secret: false
-    forceUpgrade: false
-    namespace: kube-system
-    # used by renovate
-    # repo: giantswarm/azure-cloud-controller-manager-app
-    version: 1.24.18-gs4
-  azure-cloud-node-manager:
-    appName: azure-cloud-node-manager
-    chartName: azure-cloud-node-manager-app
-    catalog: default
-    clusterValues:
-      configMap: true
-      secret: false
-    forceUpgrade: false
-    namespace: kube-system
-    # used by renovate
-    # repo: giantswarm/azure-cloud-node-manager-app
-    version: 1.24.18-gs3
-  azuredisk-csi-driver:
-    appName: azuredisk-csi-driver
-    chartName: azuredisk-csi-driver-app
-    catalog: default
-    clusterValues:
-      configMap: true
-      secret: false
-    forceUpgrade: false
-    namespace: kube-system
-    # used by renovate
-    # repo: giantswarm/azuredisk-csi-driver-app
-    version: 1.27.0
   certExporter:
     appName: cert-exporter
     chartName: cert-exporter
@@ -138,30 +66,6 @@ apps:
     # used by renovate
     # repo: giantswarm/cert-manager-app
     version: 3.1.0
-  cilium:
-    appName: cilium
-    chartName: cilium
-    catalog: default
-    clusterValues:
-      configMap: true
-      secret: false
-    forceUpgrade: true
-    namespace: kube-system
-    # used by renovate
-    # repo: giantswarm/cilium-app
-    version: 0.11.0
-  coreDNS:
-    appName: coredns
-    chartName: coredns-app
-    catalog: default
-    clusterValues:
-      configMap: true
-      secret: false
-    forceUpgrade: true
-    namespace: kube-system
-    # used by renovate
-    # repo: giantswarm/coredns-app
-    version: 1.17.1
   etcdKubernetesResourceCountExporter:
     appName: etcd-kubernetes-resources-count-exporter
     chartName: etcd-kubernetes-resources-count-exporter
@@ -242,18 +146,8 @@ apps:
     clusterValues:
       configMap: true
       secret: false
-    dependsOn: vertical-pod-autoscaler-crd
     forceUpgrade: false
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/vertical-pod-autoscaler-app
     version: 3.5.3
-  vpaCRD:
-    appName: vertical-pod-autoscaler-crd
-    chartName: vertical-pod-autoscaler-crd
-    catalog: default
-    forceUpgrade: false
-    namespace: kube-system
-    # used by renovate
-    # repo: giantswarm/vertical-pod-autoscaler-crd
-    version: 2.0.1
