@@ -161,7 +161,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/coredns-app
-    version: 1.17.1
+    version: 1.18.0
   etcdKubernetesResourceCountExporter:
     appName: etcd-kubernetes-resources-count-exporter
     chartName: etcd-kubernetes-resources-count-exporter
