@@ -40,7 +40,20 @@ userConfig:
         clusterID: {{ .Values.clusterName }}
         crd:
           install: false
-
+        domainFilters:
+          - {{ .Values.baseDomain }}
+        txtOwnerId: giantswarm-io-external-dns
+        txtPrefix: {{ .Values.clusterName }}
+        sources:
+          - service
+        extraVolumes:
+          - name: azure-config-file
+            hostPath:
+              path: /etc/kubernetes
+        extraVolumeMounts:
+          - name: azure-config-file
+            mountPath: /etc/kubernetes
+            readOnly: true
 apps:
   certExporter:
     appName: cert-exporter
