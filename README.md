@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/giantswarm/default-apps-azure.svg?style=shield)](https://circleci.com/gh/giantswarm/default-apps-azure)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/giantswarm/default-apps-azure/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/giantswarm/default-apps-azure/tree/main)
 
 # default-apps-azure chart
 
@@ -62,7 +62,3 @@ Some apps have restrictions on how they can be deployed.
 Not following these limitations will most likely result in a broken deployment.
 
 - _add limitation_
-
-## Credit
-
-- {APP HELM REPOSITORY}
