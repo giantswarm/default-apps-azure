@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Set `external-dns` config for upgrade to v3.
+- Set `chart-operator.giantswarm.io/force-helm-upgrade` annotation to `false` for `cert-manager` App CR.
 
 ## [0.0.24] - 2023-08-03
 
@@ -39,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- :boom: Remove workaround for VPA Seccomp 
+- :boom: Remove workaround for VPA Seccomp
   - requires PSP from `cluster-shared v0.6.5` which ships with `cluster-azure 0.0.23`
 - Bump `cert-exporter` to 2.6.0
 - Bump `net-exporter` to 1.16.0
@@ -51,7 +52,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Bump `azure-cloud-controller-manager` to 1.24.18-gs4
-  - Remove custom nodeSelector 
+  - Remove custom nodeSelector
 
 ## [0.0.19] - 2023-05-18
 
@@ -75,7 +76,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Bump `observability-bundle` to 0.4.2
-- :boom: Breaking - Update `Cilium Values` to enable `kube-proxy-replacement` 
+- :boom: Breaking - Update `Cilium Values` to enable `kube-proxy-replacement`
   - This change also require `cluster-azure` app >= 0.0.21
 - Bump `cilium-app` to 0.9.3
 - Bump `vertical-pod-autoscaler` to 3.4.2
@@ -107,7 +108,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- :boom: Breaking - Update `Cilium Values` to enable `kube-proxy-replacement` 
+- :boom: Breaking - Update `Cilium Values` to enable `kube-proxy-replacement`
   - This change also require `cluster-azure` app >= 0.0.17
 
 ## [0.0.13] - 2023-03-22

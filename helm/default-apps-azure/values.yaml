@@ -74,7 +74,7 @@ apps:
     clusterValues:
       configMap: true
       secret: true
-    forceUpgrade: true
+    forceUpgrade: false
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/cert-manager-app
