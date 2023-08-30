@@ -5,22 +5,14 @@ userConfig:
   certManager:
     configMap:
       values: |
-        # cert-manager-app v2.x.x
-        controller:
-          extraArgs:
-            # cert-manager's DNS01 solver by default tries to reach authoritative nameservers directly, using
-            # their public IPs. Since those are not reachable from private clusters, we instead rely on the
-            # recursive nameserver
-            #
-            # For public clusters, this setting should have no effect, as they can use the HTTP01 solver.
-            - --dns01-recursive-nameservers-only
-        # cert-manager-app v3.x.x
         # cert-manager's DNS01 solver by default tries to reach authoritative nameservers directly, using
         # their public IPs. Since those are not reachable from private clusters, we instead rely on the
         # recursive nameserver
         #
         # For public clusters, this setting should have no effect, as they can use the HTTP01 solver.
         dns01RecursiveNameserversOnly: true
+        ciliumNetworkPolicy:
+          enabled: true
   etcdKubernetesResourceCountExporter:
     configMap:
       values: |
