@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Set `external-dns` config for upgrade to v3.
 - Set `chart-operator.giantswarm.io/force-helm-upgrade` annotation to `false` for `cert-manager` App CR.
+- Enable cilium NetworkPolicies for `cert-manager`.
 
 ## [0.0.24] - 2023-08-03
 
