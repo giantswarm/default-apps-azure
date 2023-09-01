@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.0] - 2023-08-31
+
 ### Changed
 
 - Set `external-dns` config for upgrade to v3.
@@ -213,7 +215,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - changed `app.giantswarm.io` label group was changed to `application.giantswarm.io`
 
-[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.24...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.24...v0.1.0
 [0.0.24]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.23...v0.0.24
 [0.0.23]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.22...v0.0.23
 [0.0.22]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.21...v0.0.22
