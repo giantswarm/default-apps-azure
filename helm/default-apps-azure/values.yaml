@@ -151,7 +151,6 @@ apps:
     clusterValues:
       configMap: true
       secret: true
-    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
