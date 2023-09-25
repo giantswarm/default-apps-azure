@@ -140,7 +140,7 @@
                             "type": "string"
                         }
                     }
-                },
+                },                
                 "metricsServer": {
                     "type": "object",
                     "properties": {
@@ -280,6 +280,53 @@
                         }
                     }
                 },
+                "teleport-kube-agent": {
+                    "type": "object",
+                    "properties": {
+                        "appName": {
+                            "type": "string"
+                        },
+                        "catalog": {
+                            "type": "string"
+                        },
+                        "chartName": {
+                            "type": "string"
+                        },
+                        "clusterValues": {
+                            "type": "object",
+                            "properties": {
+                                "configMap": {
+                                    "type": "boolean"
+                                },
+                                "secret": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "extraConfigs": {
+                            "type": "array",
+                            "items": {
+                                "properties": {
+                                    "kind": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        },                        
+                        "forceUpgrade": {
+                            "type": "boolean"
+                        },
+                        "namespace": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "type": "string"
+                        }
+                    }
+                },                
                 "vpa": {
                     "type": "object",
                     "properties": {
