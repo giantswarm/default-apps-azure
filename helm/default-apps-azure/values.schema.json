@@ -140,7 +140,7 @@
                             "type": "string"
                         }
                     }
-                },          
+                },
                 "metricsServer": {
                     "type": "object",
                     "properties": {
@@ -326,7 +326,7 @@
                             "type": "string"
                         }
                     }
-                },                
+                },
                 "vpa": {
                     "type": "object",
                     "properties": {
