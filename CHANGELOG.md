@@ -9,6 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.2.0] - 2023-10-02
 
+### Changed
+
+- Upgrade `cert-manager-app` to [v3.4.0](https://github.com/giantswarm/cert-manager-app/releases/tag/v3.4.0)
+
 ## [0.1.0] - 2023-08-31
 
 ### Changed
