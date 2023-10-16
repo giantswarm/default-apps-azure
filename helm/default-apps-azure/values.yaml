@@ -95,7 +95,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/etcd-kubernetes-resources-count-exporter
-    version: 1.6.0
+    version: 1.7.0
   external-dns:
     appName: external-dns
     chartName: external-dns-app
