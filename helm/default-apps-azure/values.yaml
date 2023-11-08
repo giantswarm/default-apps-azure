@@ -38,6 +38,8 @@ userConfig:
         txtPrefix: {{ .Values.clusterName }}
         sources:
           - service
+        extraArgs:
+          - '--txt-wildcard-replacement=g'
         extraVolumes:
           - name: azure-config-file
             hostPath:
