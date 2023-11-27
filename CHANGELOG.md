@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Shortened `etcd-kubernetes-resources-count-exporter` appName to `etcd-k8s-res-count-exporter`.
+
 ## [0.4.0] - 2023-11-20
 
 ## [0.3.0] - 2023-10-09
