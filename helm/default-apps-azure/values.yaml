@@ -157,6 +157,19 @@ apps:
     # used by renovate
     # repo: giantswarm/observability-bundle
     version: 0.10.1
+  securityBundle:
+    appName: security-bundle
+    chartName: security-bundle
+    catalog: giantswarm
+    clusterValues:
+      configMap: true
+      secret: false
+    forceUpgrade: false
+    inCluster: true
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/security-bundle
+    version: 1.4.1
   teleport-kube-agent:
     appName: teleport-kube-agent
     chartName: teleport-kube-agent
