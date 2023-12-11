@@ -58,7 +58,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/cert-exporter
-    version: 2.7.0
+    version: 2.8.4
   certManager:
     appName: cert-manager
     chartName: cert-manager-app
@@ -70,7 +70,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/cert-manager-app
-    version: 3.4.1
+    version: 3.6.1
   chartOperatorExtensions:
     appName: chart-operator-extensions
     chartName: chart-operator-extensions
@@ -85,7 +85,7 @@ apps:
     # repo: giantswarm/chart-operator-extensions
     version: 1.1.1
   etcdKubernetesResourceCountExporter:
-    appName: etcd-kubernetes-resources-count-exporter
+    appName: etcd-k8s-res-count-exporter
     chartName: etcd-kubernetes-resources-count-exporter
     catalog: default
     clusterValues:
@@ -95,7 +95,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/etcd-kubernetes-resources-count-exporter
-    version: 1.6.0
+    version: 1.8.0
   external-dns:
     appName: external-dns
     chartName: external-dns-app
@@ -119,7 +119,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/metrics-server-app
-    version: 2.3.1
+    version: 2.4.1
   netExporter:
     appName: net-exporter
     chartName: net-exporter
@@ -131,7 +131,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/net-exporter
-    version: 1.18.0
+    version: 1.18.1
   nodeExporter:
     appName: node-exporter
     chartName: node-exporter-app
@@ -143,7 +143,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/node-exporter-app
-    version: 1.17.1
+    version: 1.18.1
   observabilityBundle:
     appName: observability-bundle
     chartName: observability-bundle
@@ -156,7 +156,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/observability-bundle
-    version: 0.8.7
+    version: 0.10.1
   teleport-kube-agent:
     appName: teleport-kube-agent
     chartName: teleport-kube-agent
@@ -187,4 +187,4 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/vertical-pod-autoscaler-app
-    version: 4.2.0
+    version: 4.6.0

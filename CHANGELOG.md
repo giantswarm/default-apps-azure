@@ -11,6 +11,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add `teleport-kube-agent-app`
 
+## [0.5.0] - 2023-11-27
+
+### Fixed
+
+- Shortened `etcd-kubernetes-resources-count-exporter` appName to `etcd-k8s-res-count-exporter`.
+
+## [0.4.0] - 2023-11-20
+
 ## [0.3.0] - 2023-10-09
 
 ### Added
@@ -231,7 +239,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - changed `app.giantswarm.io` label group was changed to `application.giantswarm.io`
 
-[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/giantswarm/default-apps-azure/compare/v0.4.0...v0.5.0
+[0.4.0]: https://github.com/giantswarm/default-apps-azure/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/giantswarm/default-apps-azure/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/giantswarm/default-apps-azure/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/giantswarm/default-apps-azure/compare/v0.0.24...v0.1.0
