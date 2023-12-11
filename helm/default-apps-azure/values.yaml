@@ -172,6 +172,7 @@ apps:
     # a list of extraConfigs for the App,
     # It can be secret or configmap
     # https://github.com/giantswarm/rfc/tree/main/multi-layer-app-config#example
+    # NOTE: This configMap will be created by teleport-operator
     extraConfigs:
       - kind: configMap
         name: "{{ $.Values.clusterName }}-teleport-kube-agent-config"
