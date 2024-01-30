@@ -48,6 +48,39 @@ userConfig:
           - name: azure-config-file
             mountPath: /etc/kubernetes
             readOnly: true
+  observabilityBundle:
+    configMap:
+      values: |
+        userConfig:
+          kubePrometheusStack:
+            configMap:
+              values:
+                global:
+                  rbac:
+                    pspEnabled: true
+                kube-prometheus-stack:
+                  grafana:
+                    rbac:
+                      pspEnabled: true
+                  kube-state-metrics:
+                    podSecurityPolicy:
+                      enabled: true
+                  prometheus-node-exporter:
+                    rbac:
+                      pspEnabled: true
+          prometheusAgent:
+            configMap:
+              values:
+                prometheus-agent:
+                  psp:
+                    enabled: true
+          promtail:
+            configMap:
+              values:
+                promtail:
+                  rbac:
+                    pspEnabled: true
+
 apps:
   certExporter:
     appName: cert-exporter
@@ -60,7 +93,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/cert-exporter
-    version: 2.8.4
+    version: 2.9.0
   certManager:
     appName: cert-manager
     chartName: cert-manager-app
@@ -121,7 +154,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/metrics-server-app
-    version: 2.4.1
+    version: 2.4.2
   netExporter:
     appName: net-exporter
     chartName: net-exporter
@@ -158,7 +191,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/observability-bundle
-    version: 0.10.1
+    version: 1.0.0
   securityBundle:
     appName: security-bundle
     chartName: security-bundle
@@ -171,7 +204,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/security-bundle
-    version: 1.4.1
+    version: 1.5.0
   teleport-kube-agent:
     appName: teleport-kube-agent
     chartName: teleport-kube-agent
@@ -183,7 +216,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/teleport-kube-agent-app
-    version: 0.6.0
+    version: 0.7.0
     # a list of extraConfigs for the App,
     # It can be secret or configmap
     # https://github.com/giantswarm/rfc/tree/main/multi-layer-app-config#example
