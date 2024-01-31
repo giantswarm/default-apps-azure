@@ -7,15 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Use a YAML object for the apps configuration, so that defaults are not overwritten when users pass custom values.
+
 ## [0.8.1] - 2024-01-17
 
 ### Fixed
 
 - Fix psp values for observability-bundle > 1.0.0.
-
-### Changed
-
-- Use a YAML object for the apps configuration, so that defaults are not overwritten when users pass custom values.
 
 ## [0.8.0] - 2024-01-15
 
