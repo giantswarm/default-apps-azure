@@ -4,8 +4,7 @@ This page lists all available configuration options, based on the [configuration
 
 <!-- DOCS_START -->
 
-### Apps
-
+### 
 Properties within the `.apps` top-level object
 
 | **Property** | **Description** | **More Details** |
@@ -51,16 +50,26 @@ Properties within the `.apps` top-level object
 | `apps.etcdKubernetesResourceCountExporter.forceUpgrade` |**None**|**Type:** `boolean`<br/>|
 | `apps.etcdKubernetesResourceCountExporter.namespace` |**None**|**Type:** `string`<br/>|
 | `apps.etcdKubernetesResourceCountExporter.version` |**None**|**Type:** `string`<br/>|
-| `apps.external-dns` |**None**|**Type:** `object`<br/>|
-| `apps.external-dns.appName` |**None**|**Type:** `string`<br/>|
-| `apps.external-dns.catalog` |**None**|**Type:** `string`<br/>|
-| `apps.external-dns.chartName` |**None**|**Type:** `string`<br/>|
-| `apps.external-dns.clusterValues` |**None**|**Type:** `object`<br/>|
-| `apps.external-dns.clusterValues.configMap` |**None**|**Type:** `boolean`<br/>|
-| `apps.external-dns.clusterValues.secret` |**None**|**Type:** `boolean`<br/>|
-| `apps.external-dns.forceUpgrade` |**None**|**Type:** `boolean`<br/>|
-| `apps.external-dns.namespace` |**None**|**Type:** `string`<br/>|
-| `apps.external-dns.version` |**None**|**Type:** `string`<br/>|
+| `apps.externalDns` |**None**|**Type:** `object`<br/>|
+| `apps.externalDns.appName` |**None**|**Type:** `string`<br/>|
+| `apps.externalDns.catalog` |**None**|**Type:** `string`<br/>|
+| `apps.externalDns.chartName` |**None**|**Type:** `string`<br/>|
+| `apps.externalDns.clusterValues` |**None**|**Type:** `object`<br/>|
+| `apps.externalDns.clusterValues.configMap` |**None**|**Type:** `boolean`<br/>|
+| `apps.externalDns.clusterValues.secret` |**None**|**Type:** `boolean`<br/>|
+| `apps.externalDns.forceUpgrade` |**None**|**Type:** `boolean`<br/>|
+| `apps.externalDns.namespace` |**None**|**Type:** `string`<br/>|
+| `apps.externalDns.version` |**None**|**Type:** `string`<br/>|
+| `apps.externalDnsPrivate` |**None**|**Type:** `object`<br/>|
+| `apps.externalDnsPrivate.appName` |**None**|**Type:** `string`<br/>|
+| `apps.externalDnsPrivate.catalog` |**None**|**Type:** `string`<br/>|
+| `apps.externalDnsPrivate.chartName` |**None**|**Type:** `string`<br/>|
+| `apps.externalDnsPrivate.clusterValues` |**None**|**Type:** `object`<br/>|
+| `apps.externalDnsPrivate.clusterValues.configMap` |**None**|**Type:** `boolean`<br/>|
+| `apps.externalDnsPrivate.clusterValues.secret` |**None**|**Type:** `boolean`<br/>|
+| `apps.externalDnsPrivate.forceUpgrade` |**None**|**Type:** `boolean`<br/>|
+| `apps.externalDnsPrivate.namespace` |**None**|**Type:** `string`<br/>|
+| `apps.externalDnsPrivate.version` |**None**|**Type:** `string`<br/>|
 | `apps.metricsServer` |**None**|**Type:** `object`<br/>|
 | `apps.metricsServer.appName` |**None**|**Type:** `string`<br/>|
 | `apps.metricsServer.catalog` |**None**|**Type:** `string`<br/>|
@@ -127,21 +136,30 @@ Properties within the `.apps` top-level object
 | `apps.vpa.namespace` |**None**|**Type:** `string`<br/>|
 | `apps.vpa.version` |**None**|**Type:** `string`<br/>|
 
-### User Config
+### 
+Properties within the `.cluster` top-level object
 
+| **Property** | **Description** | **More Details** |
+| :----------- | :-------------- | :--------------- |
+| `cluster.private` |**None**|**Type:** `boolean`<br/>|
+
+### 
 Properties within the `.userConfig` top-level object
 
 | **Property** | **Description** | **More Details** |
 | :----------- | :-------------- | :--------------- |
 | `userConfig.certManager` |**None**|**Type:** `object`<br/>|
 | `userConfig.certManager.configMap` |**None**|**Type:** `object`<br/>|
-| `userConfig.certManager.configMap.values` |**None**|**Type:** `string`<br/>|
+| `userConfig.certManager.configMap.values` |**None**|**Types:** `object, string`<br/>|
 | `userConfig.etcdKubernetesResourceCountExporter` |**None**|**Type:** `object`<br/>|
 | `userConfig.etcdKubernetesResourceCountExporter.configMap` |**None**|**Type:** `object`<br/>|
-| `userConfig.etcdKubernetesResourceCountExporter.configMap.values` |**None**|**Type:** `string`<br/>|
-| `userConfig.external-dns` |**None**|**Type:** `object`<br/>|
-| `userConfig.external-dns.configMap` |**None**|**Type:** `object`<br/>|
-| `userConfig.external-dns.configMap.values` |**None**|**Type:** `string`<br/>|
+| `userConfig.etcdKubernetesResourceCountExporter.configMap.values` |**None**|**Types:** `object, string`<br/>|
+| `userConfig.externalDns` |**None**|**Type:** `object`<br/>|
+| `userConfig.externalDns.configMap` |**None**|**Type:** `object`<br/>|
+| `userConfig.externalDns.configMap.values` |**None**|**Types:** `object, string`<br/>|
+| `userConfig.externalDnsPrivate` |**None**|**Type:** `object`<br/>|
+| `userConfig.externalDnsPrivate.configMap` |**None**|**Type:** `object`<br/>|
+| `userConfig.externalDnsPrivate.configMap.values` |**None**|**Types:** `object, string`<br/>|
 
 ### Other
 
@@ -149,5 +167,7 @@ Properties within the `.userConfig` top-level object
 | :----------- | :-------------- | :--------------- |
 | `clusterName` |**None**|**Type:** `string`<br/>|
 | `organization` |**None**|**Type:** `string`<br/>|
+
+
 
 <!-- DOCS_END -->
