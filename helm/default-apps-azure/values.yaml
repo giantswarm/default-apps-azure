@@ -87,6 +87,7 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: prometheus-operator-crd
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -99,6 +100,7 @@ apps:
     clusterValues:
       configMap: true
       secret: true
+    dependsOn: prometheus-operator-crd
     forceUpgrade: false
     namespace: kube-system
     # used by renovate
@@ -136,6 +138,7 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: prometheus-operator-crd
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -160,6 +163,7 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: prometheus-operator-crd
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -172,12 +176,14 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: prometheus-operator-crd
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/node-exporter-app
     version: 1.18.1
   observabilityBundle:
+    # Includes prometheus-operator-crd
     appName: observability-bundle
     chartName: observability-bundle
     catalog: default
@@ -197,6 +203,7 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: prometheus-operator-crd
     forceUpgrade: false
     inCluster: true
     namespace: kube-system
@@ -230,6 +237,7 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: prometheus-operator-crd
     forceUpgrade: false
     namespace: kube-system
     # used by renovate

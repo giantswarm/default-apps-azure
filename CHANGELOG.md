@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Add dependencies on `prometheus-operator-crd` for quicker deployment
+
 ## [0.8.1] - 2024-01-17
 
 ### Fixed
