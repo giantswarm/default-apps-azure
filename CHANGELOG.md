@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Adapt templates to be able to enable/disable apps. 
 - Add dependencies on `prometheus-operator-crd` for quicker deployment
-
+- Update observability-bundle to v1.2.1
 
 ## [0.8.1] - 2024-01-17
 
