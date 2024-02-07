@@ -88,6 +88,7 @@ apps:
       configMap: true
       secret: false
     dependsOn: prometheus-operator-crd
+    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -101,6 +102,7 @@ apps:
       configMap: true
       secret: true
     dependsOn: prometheus-operator-crd
+    enabled: true
     forceUpgrade: false
     namespace: kube-system
     # used by renovate
@@ -126,6 +128,7 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    enabled: true
     forceUpgrade: false
     namespace: kube-system
     # used by renovate
@@ -139,6 +142,7 @@ apps:
       configMap: true
       secret: false
     dependsOn: prometheus-operator-crd
+    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -151,6 +155,7 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -164,6 +169,7 @@ apps:
       configMap: true
       secret: false
     dependsOn: prometheus-operator-crd
+    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -177,6 +183,7 @@ apps:
       configMap: true
       secret: false
     dependsOn: prometheus-operator-crd
+    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -190,6 +197,7 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    enabled: true
     forceUpgrade: false
     inCluster: true
     namespace: kube-system
@@ -204,6 +212,7 @@ apps:
       configMap: true
       secret: false
     dependsOn: prometheus-operator-crd
+    enabled: true
     forceUpgrade: false
     inCluster: true
     namespace: kube-system
@@ -217,6 +226,7 @@ apps:
     clusterValues:
       configMap: true
       secret: true
+    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -238,6 +248,7 @@ apps:
       configMap: true
       secret: false
     dependsOn: prometheus-operator-crd
+    enabled: true
     forceUpgrade: false
     namespace: kube-system
     # used by renovate

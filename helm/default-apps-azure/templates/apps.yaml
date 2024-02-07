@@ -1,5 +1,6 @@
 {{- range $key, $value := .Values.apps }}
 {{- $appName := .appName }}
+{{- if .enabled }}
 ---
 apiVersion: application.giantswarm.io/v1alpha1
 kind: App
@@ -98,5 +99,5 @@ stringData:
   {{- (tpl (.secret | toYaml | toString) $) | nindent 2 }}
 {{- end }}
 {{- end }}
-
+{{- end }}
 {{- end }}
