@@ -9,9 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Adapt templates to be able to enable/disable apps. 
+- Adapt templates to be able to enable/disable apps.
 - Add dependencies on `prometheus-operator-crd` for quicker deployment
 - Update observability-bundle to v1.2.1
+- Added values for security-bundle to re-enable PSPs
 
 ## [0.8.1] - 2024-01-17
 
