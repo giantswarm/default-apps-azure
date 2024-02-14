@@ -4,7 +4,7 @@ organization: ""
 userConfig:
   certManager:
     configMap:
-      values: |
+      values:
         # cert-manager's DNS01 solver by default tries to reach authoritative nameservers directly, using
         # their public IPs. Since those are not reachable from private clusters, we instead rely on the
         # recursive nameserver
@@ -15,7 +15,7 @@ userConfig:
           enabled: true
   etcdKubernetesResourceCountExporter:
     configMap:
-      values: |
+      values:
         etcd:
           hostPath: "/etc/kubernetes/pki/etcd/"
           cacertpath: "/certs/ca.crt"
@@ -26,16 +26,16 @@ userConfig:
           prefix: "/registry/events/"
   external-dns:
     configMap:
-      values: |
+      values:
         flavor: capi
         provider: azure
-        clusterID: {{ .Values.clusterName }}
+        clusterID: "{{ .Values.clusterName }}"
         crd:
           install: false
         domainFilters:
-          - {{ .Values.baseDomain }}
+          - "{{ .Values.baseDomain }}"
         txtOwnerId: giantswarm-io-external-dns
-        txtPrefix: {{ .Values.clusterName }}
+        txtPrefix: "{{ .Values.clusterName }}"
         sources:
           - service
         extraVolumes:
