@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Disable PSPs for security-bundle.
+- Start supporting k8s 1.25 and later versions.
+
 ## [0.8.3] - 2024-02-13
 
 ### Added
