@@ -46,60 +46,6 @@ userConfig:
           - name: azure-config-file
             mountPath: /etc/kubernetes
             readOnly: true
-  securityBundle:
-    configMap:
-      values: |
-        userConfig:
-          exceptionRecommender:
-            configMap:
-              values:
-                global:
-                  podSecurityStandards:
-                    enforced: false
-          falco:
-            configMap:
-              values:
-                global:
-                  podSecurityStandards:
-                    enforced: false
-                falco:
-                  falco-exporter:
-                    podSecurityPolicy:
-                      create: true
-          jiralert:
-            configMap:
-              values:
-                global:
-                  podSecurityStandards:
-                    enforced: false
-          kyverno:
-            configMap:
-              values:
-                global:
-                  podSecurityStandards:
-                    enforced: false
-          kyvernoPolicies:
-            configMap:
-              values:
-                kyverno-policies:
-                  validationFailureAction: Audit
-          kyvernoPolicyOperator:
-            configMap:
-              values:
-                global:
-                  podSecurityStandards:
-                    enforced: false
-          trivy:
-            configMap:
-              values:
-                trivy:
-                  rbac:
-                    pspEnabled: true
-          trivyOperator:
-            configMap:
-              values:
-                rbac:
-                  pspEnabled: true
 
 apps:
   certExporter:
@@ -240,7 +186,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/security-bundle
-    version: 1.6.0
+    version: 1.6.1
   teleport-kube-agent:
     appName: teleport-kube-agent
     chartName: teleport-kube-agent
