@@ -46,38 +46,60 @@ userConfig:
           - name: azure-config-file
             mountPath: /etc/kubernetes
             readOnly: true
-  observabilityBundle:
+  securityBundle:
     configMap:
       values: |
         userConfig:
-          kubePrometheusStack:
+          exceptionRecommender:
             configMap:
               values:
                 global:
-                  rbac:
-                    pspEnabled: true
-                kube-prometheus-stack:
-                  grafana:
-                    rbac:
-                      pspEnabled: true
-                  kube-state-metrics:
+                  podSecurityStandards:
+                    enforced: false
+          falco:
+            configMap:
+              values:
+                global:
+                  podSecurityStandards:
+                    enforced: false
+                falco:
+                  falco-exporter:
                     podSecurityPolicy:
-                      enabled: true
-                  prometheus-node-exporter:
-                    rbac:
-                      pspEnabled: true
-          prometheusAgent:
+                      create: true
+          jiralert:
             configMap:
               values:
-                prometheus-agent:
-                  psp:
-                    enabled: true
-          promtail:
+                global:
+                  podSecurityStandards:
+                    enforced: false
+          kyverno:
             configMap:
               values:
-                promtail:
+                global:
+                  podSecurityStandards:
+                    enforced: false
+          kyvernoPolicies:
+            configMap:
+              values:
+                kyverno-policies:
+                  validationFailureAction: Audit
+          kyvernoPolicyOperator:
+            configMap:
+              values:
+                global:
+                  podSecurityStandards:
+                    enforced: false
+          trivy:
+            configMap:
+              values:
+                trivy:
                   rbac:
                     pspEnabled: true
+          trivyOperator:
+            configMap:
+              values:
+                rbac:
+                  pspEnabled: true
 
 apps:
   certExporter:
@@ -87,6 +109,8 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: prometheus-operator-crd
+    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -99,11 +123,13 @@ apps:
     clusterValues:
       configMap: true
       secret: true
+    dependsOn: prometheus-operator-crd
+    enabled: true
     forceUpgrade: false
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/cert-manager-app
-    version: 3.6.1
+    version: 3.7.3
   chartOperatorExtensions:
     appName: chart-operator-extensions
     chartName: chart-operator-extensions
@@ -116,7 +142,7 @@ apps:
     namespace: giantswarm
     # used by renovate
     # repo: giantswarm/chart-operator-extensions
-    version: 1.1.1
+    version: 1.1.2
   etcdKubernetesResourceCountExporter:
     appName: etcd-k8s-res-count-exporter
     chartName: etcd-kubernetes-resources-count-exporter
@@ -124,11 +150,12 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    enabled: true
     forceUpgrade: false
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/etcd-kubernetes-resources-count-exporter
-    version: 1.8.0
+    version: 1.9.0
   external-dns:
     appName: external-dns
     chartName: external-dns-app
@@ -136,6 +163,8 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: prometheus-operator-crd
+    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -148,6 +177,7 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
@@ -160,11 +190,13 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: prometheus-operator-crd
+    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/net-exporter
-    version: 1.18.1
+    version: 1.18.2
   nodeExporter:
     appName: node-exporter
     chartName: node-exporter-app
@@ -172,24 +204,28 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: prometheus-operator-crd
+    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/node-exporter-app
-    version: 1.18.1
+    version: 1.19.0
   observabilityBundle:
+    # Includes prometheus-operator-crd
     appName: observability-bundle
     chartName: observability-bundle
     catalog: default
     clusterValues:
       configMap: true
       secret: false
+    enabled: true
     forceUpgrade: false
     inCluster: true
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/observability-bundle
-    version: 1.0.0
+    version: 1.2.1
   securityBundle:
     appName: security-bundle
     chartName: security-bundle
@@ -197,12 +233,14 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: prometheus-operator-crd
+    enabled: true
     forceUpgrade: false
     inCluster: true
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/security-bundle
-    version: 1.5.0
+    version: 1.6.0
   teleport-kube-agent:
     appName: teleport-kube-agent
     chartName: teleport-kube-agent
@@ -210,11 +248,12 @@ apps:
     clusterValues:
       configMap: true
       secret: true
+    enabled: true
     forceUpgrade: true
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/teleport-kube-agent-app
-    version: 0.7.0
+    version: 0.7.1
     # a list of extraConfigs for the App,
     # It can be secret or configmap
     # https://github.com/giantswarm/rfc/tree/main/multi-layer-app-config#example
@@ -230,8 +269,10 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: prometheus-operator-crd
+    enabled: true
     forceUpgrade: false
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/vertical-pod-autoscaler-app
-    version: 4.6.0
+    version: 5.1.0
