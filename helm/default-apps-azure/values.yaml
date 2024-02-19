@@ -171,7 +171,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/observability-bundle
-    version: 1.2.2
+    version: 1.2.3
   securityBundle:
     appName: security-bundle
     chartName: security-bundle
