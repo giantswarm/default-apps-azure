@@ -10,6 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Use a YAML object for the apps configuration, so that defaults are not overwritten when users pass custom values.
+- Update external-dns-app to v3.1.0
+- Update observability-bundle to v1.2.3
 
 ## [0.9.0] - 2024-02-14
 
@@ -17,7 +19,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Disable PSPs for security-bundle.
 - Start supporting k8s 1.25 and later versions.
-
 
 ## [0.8.3] - 2024-02-13
 
