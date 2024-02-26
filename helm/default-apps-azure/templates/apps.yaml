@@ -1,6 +1,6 @@
 {{- range $key, $value := .Values.apps }}
 {{- $appName := .appName }}
-{{- if .enabled }}
+{{- if eq (tpl (.enabled | toString) $) "true" }}
 ---
 apiVersion: application.giantswarm.io/v1alpha1
 kind: App
