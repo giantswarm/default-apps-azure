@@ -1,0 +1,21 @@
+apiVersion: v1
+data:
+  values: |
+    {{- if $.Values.cluster.private }}
+    dns01RecursiveNameservers: "8.8.8.8:53,1.1.1.1:53"
+    giantSwarmClusterIssuer:
+      acme:
+        http01:
+          enabled: false
+        dns01:
+          azureDNS:
+            enabled: true
+            zoneName: "{{ .Values.baseDomain }}"
+            resourceGroupName: "{{ .Values.clusterName }}"
+            subscriptionID: "{{ .Values.subscriptionID }}"
+            identityClientID: "{{ .Values.identityClientID }}"
+    {{- end }}
+kind: ConfigMap
+metadata:
+  name: "{{ $.Values.clusterName }}-cert-manager-extra-config"
+  namespace: "{{ $.Release.Namespace }}"
