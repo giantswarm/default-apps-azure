@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add `cilium-servicemonitors` app.
+
 ### Changed
 
 - Add second external-dns app for private clusters.
