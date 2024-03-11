@@ -471,6 +471,9 @@
                 }
             }
         },
+        "baseDomain": {
+            "type": "string"
+        },
         "cluster": {
             "type": "object",
             "properties": {
@@ -480,6 +483,12 @@
             }
         },
         "clusterName": {
+            "type": "string"
+        },
+        "identityClientID": {
+            "type": "string"
+        },
+        "subscriptionID": {
             "type": "string"
         },
         "organization": {

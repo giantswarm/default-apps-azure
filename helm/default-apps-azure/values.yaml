@@ -1,10 +1,15 @@
 clusterName: ""
 organization: ""
 
+# only necessary for management clusters
+identityClientID: ""
+
 # filled by cluster-apps-operator
 # via <cluster-name>-cluster-values configmap
+baseDomain: ""
 cluster:
   private: false
+subscriptionID: ""
 
 userConfig:
   certManager:
@@ -15,6 +20,9 @@ userConfig:
         # recursive nameserver
         #
         # For public clusters, this setting should have no effect, as they can use the HTTP01 solver.
+
+        # check extra config for private WC parameters
+        # note that user config has higher priority and extra config can be overwritten by userConfig
         dns01RecursiveNameserversOnly: true
         ciliumNetworkPolicy:
           enabled: true
@@ -101,6 +109,10 @@ apps:
     # used by renovate
     # repo: giantswarm/cert-manager-app
     version: 3.7.3
+    extraConfigs:
+      - kind: configMap
+        name: "{{ $.Values.clusterName }}-cert-manager-extra-config"
+        namespace: "{{ $.Release.Namespace }}"
   chartOperatorExtensions:
     appName: chart-operator-extensions
     chartName: chart-operator-extensions
