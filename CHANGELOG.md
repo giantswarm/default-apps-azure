@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.11.0] - 2024-03-14
+
 ### Added
 
 - Add `cilium-servicemonitors` app.
@@ -298,7 +300,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - changed `app.giantswarm.io` label group was changed to `application.giantswarm.io`
 
-[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.10.0...HEAD
+[Unreleased]: https://github.com/giantswarm/default-apps-azure/compare/v0.11.0...HEAD
+[0.11.0]: https://github.com/giantswarm/default-apps-azure/compare/v0.10.0...v0.11.0
 [0.10.0]: https://github.com/giantswarm/default-apps-azure/compare/v0.9.0...v0.10.0
 [0.9.0]: https://github.com/giantswarm/default-apps-azure/compare/v0.8.3...v0.9.0
 [0.8.3]: https://github.com/giantswarm/default-apps-azure/compare/v0.8.2...v0.8.3
