@@ -18,7 +18,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add second external-dns app for private clusters.
 - Add private cluster support for cert-manager.
 - Update observability-bundle to v1.3.2
-- Update observability-bundle to v1.6.2
+- Update security-bundle to v1.6.2
 
 ## [0.10.0] - 2024-02-21
 
