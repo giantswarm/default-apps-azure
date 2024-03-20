@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add `capi-node-labeler` app.
+
 ## [0.11.0] - 2024-03-14
 
 ### Added

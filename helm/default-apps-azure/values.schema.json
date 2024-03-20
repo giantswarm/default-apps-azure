@@ -5,6 +5,43 @@
         "apps": {
             "type": "object",
             "properties": {
+                "capi-node-labeler": {
+                    "type": "object",
+                    "properties": {
+                        "appName": {
+                            "type": "string"
+                        },
+                        "catalog": {
+                            "type": "string"
+                        },
+                        "chartName": {
+                            "type": "string"
+                        },
+                        "clusterValues": {
+                            "type": "object",
+                            "properties": {
+                                "configMap": {
+                                    "type": "boolean"
+                                },
+                                "secret": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "enabled": {
+                            "type": "boolean"
+                        },
+                        "forceUpgrade": {
+                            "type": "boolean"
+                        },
+                        "namespace": {
+                            "type": "string"
+                        },
+                        "version": {
+                            "type": "string"
+                        }
+                    }
+                },
                 "certExporter": {
                     "type": "object",
                     "properties": {
@@ -423,7 +460,7 @@
                                     }
                                 }
                             }
-                        },                        
+                        },
                         "forceUpgrade": {
                             "type": "boolean"
                         },
@@ -477,7 +514,7 @@
         "cluster": {
             "type": "object",
             "properties": {
-                "private":{
+                "private": {
                     "type": "boolean"
                 }
             }
@@ -488,10 +525,10 @@
         "identityClientID": {
             "type": "string"
         },
-        "subscriptionID": {
+        "organization": {
             "type": "string"
         },
-        "organization": {
+        "subscriptionID": {
             "type": "string"
         },
         "userConfig": {
@@ -504,7 +541,10 @@
                             "type": "object",
                             "properties": {
                                 "values": {
-                                    "type": ["object", "string"]
+                                    "type": [
+                                        "object",
+                                        "string"
+                                    ]
                                 }
                             }
                         }
@@ -517,7 +557,10 @@
                             "type": "object",
                             "properties": {
                                 "values": {
-                                    "type": ["object", "string"]
+                                    "type": [
+                                        "object",
+                                        "string"
+                                    ]
                                 }
                             }
                         }
@@ -530,7 +573,10 @@
                             "type": "object",
                             "properties": {
                                 "values": {
-                                    "type": ["object", "string"]
+                                    "type": [
+                                        "object",
+                                        "string"
+                                    ]
                                 }
                             }
                         }
@@ -543,7 +589,10 @@
                             "type": "object",
                             "properties": {
                                 "values": {
-                                    "type": ["object", "string"]
+                                    "type": [
+                                        "object",
+                                        "string"
+                                    ]
                                 }
                             }
                         }
