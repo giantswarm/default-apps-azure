@@ -9,6 +9,17 @@ Properties within the `.apps` top-level object
 
 | **Property** | **Description** | **More Details** |
 | :----------- | :-------------- | :--------------- |
+| `apps.capi-node-labeler` |**None**|**Type:** `object`<br/>|
+| `apps.capi-node-labeler.appName` |**None**|**Type:** `string`<br/>|
+| `apps.capi-node-labeler.catalog` |**None**|**Type:** `string`<br/>|
+| `apps.capi-node-labeler.chartName` |**None**|**Type:** `string`<br/>|
+| `apps.capi-node-labeler.clusterValues` |**None**|**Type:** `object`<br/>|
+| `apps.capi-node-labeler.clusterValues.configMap` |**None**|**Type:** `boolean`<br/>|
+| `apps.capi-node-labeler.clusterValues.secret` |**None**|**Type:** `boolean`<br/>|
+| `apps.capi-node-labeler.enabled` |**None**|**Type:** `boolean`<br/>|
+| `apps.capi-node-labeler.forceUpgrade` |**None**|**Type:** `boolean`<br/>|
+| `apps.capi-node-labeler.namespace` |**None**|**Type:** `string`<br/>|
+| `apps.capi-node-labeler.version` |**None**|**Type:** `string`<br/>|
 | `apps.certExporter` |**None**|**Type:** `object`<br/>|
 | `apps.certExporter.appName` |**None**|**Type:** `string`<br/>|
 | `apps.certExporter.catalog` |**None**|**Type:** `string`<br/>|
@@ -40,6 +51,17 @@ Properties within the `.apps` top-level object
 | `apps.chartOperatorExtensions.enabled` |**None**|**Type:** `boolean`<br/>|
 | `apps.chartOperatorExtensions.namespace` |**None**|**Type:** `string`<br/>|
 | `apps.chartOperatorExtensions.version` |**None**|**Type:** `string`<br/>|
+| `apps.ciliumServiceMonitors` |**None**|**Type:** `object`<br/>|
+| `apps.ciliumServiceMonitors.appName` |**None**|**Type:** `string`<br/>|
+| `apps.ciliumServiceMonitors.catalog` |**None**|**Type:** `string`<br/>|
+| `apps.ciliumServiceMonitors.chartName` |**None**|**Type:** `string`<br/>|
+| `apps.ciliumServiceMonitors.clusterValues` |**None**|**Type:** `object`<br/>|
+| `apps.ciliumServiceMonitors.clusterValues.configMap` |**None**|**Type:** `boolean`<br/>|
+| `apps.ciliumServiceMonitors.clusterValues.secret` |**None**|**Type:** `boolean`<br/>|
+| `apps.ciliumServiceMonitors.dependsOn` |**None**|**Type:** `string`<br/>|
+| `apps.ciliumServiceMonitors.enabled` |**None**|**Type:** `boolean`<br/>|
+| `apps.ciliumServiceMonitors.namespace` |**None**|**Type:** `string`<br/>|
+| `apps.ciliumServiceMonitors.version` |**None**|**Type:** `string`<br/>|
 | `apps.etcdKubernetesResourceCountExporter` |**None**|**Type:** `object`<br/>|
 | `apps.etcdKubernetesResourceCountExporter.appName` |**None**|**Type:** `string`<br/>|
 | `apps.etcdKubernetesResourceCountExporter.catalog` |**None**|**Type:** `string`<br/>|
@@ -165,8 +187,11 @@ Properties within the `.userConfig` top-level object
 
 | **Property** | **Description** | **More Details** |
 | :----------- | :-------------- | :--------------- |
+| `baseDomain` |**None**|**Type:** `string`<br/>|
 | `clusterName` |**None**|**Type:** `string`<br/>|
+| `identityClientID` |**None**|**Type:** `string`<br/>|
 | `organization` |**None**|**Type:** `string`<br/>|
+| `subscriptionID` |**None**|**Type:** `string`<br/>|
 
 
 
