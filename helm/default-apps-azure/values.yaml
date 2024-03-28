@@ -192,7 +192,7 @@ apps:
     # used by renovate
     # repo: giantswarm/external-dns-app
     version: 3.1.0
-  k8sDnsNodeCacheApp:
+  k8sDnsNodeCache:
     appName: k8s-dns-node-cache
     chartName: k8s-dns-node-cache-app
     catalog: default

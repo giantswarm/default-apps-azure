@@ -286,7 +286,7 @@
                         }
                     }
                 },
-                "k8sDnsNodeCacheApp": {
+                "k8sDnsNodeCache": {
                     "type": "object",
                     "properties": {
                         "appName": {
@@ -298,7 +298,18 @@
                         "chartName": {
                             "type": "string"
                         },
-                        "forceUpgrade": {
+                        "clusterValues": {
+                            "type": "object",
+                            "properties": {
+                                "configMap": {
+                                    "type": "boolean"
+                                },
+                                "secret": {
+                                    "type": "boolean"
+                                }
+                            }
+                        },
+                        "enabled": {
                             "type": "boolean"
                         },
                         "namespace": {
