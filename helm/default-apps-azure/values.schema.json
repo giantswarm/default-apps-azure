@@ -286,8 +286,6 @@
                         }
                     }
                 },
-<<<<<<< Updated upstream
-=======
                 "k8sDnsNodeCache": {
                     "type": "object",
                     "properties": {
@@ -322,7 +320,6 @@
                         }
                     }
                 },
->>>>>>> Stashed changes
                 "metricsServer": {
                     "type": "object",
                     "properties": {
