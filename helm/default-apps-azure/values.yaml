@@ -192,6 +192,18 @@ apps:
     # used by renovate
     # repo: giantswarm/external-dns-app
     version: 3.1.0
+<<<<<<< Updated upstream
+=======
+  k8sDnsNodeCache:
+    appName: k8s-dns-node-cache
+    chartName: k8s-dns-node-cache-app
+    catalog: default
+    enabled: true
+    namespace: kube-system
+    # used by renovate
+    # repo: giantswarm/k8s-dns-node-cache-app
+    version: 2.6.1
+>>>>>>> Stashed changes
   metricsServer:
     appName: metrics-server
     chartName: metrics-server-app
