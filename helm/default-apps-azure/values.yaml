@@ -284,7 +284,7 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/teleport-kube-agent-app
-    version: 0.7.1
+    version: 0.8.0
     # a list of extraConfigs for the App,
     # It can be secret or configmap
     # https://github.com/giantswarm/rfc/tree/main/multi-layer-app-config#example
