@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Update `net-exporter` to 1.19.0.
+
 ## [0.13.1] - 2024-04-30
 
 ## [0.13.0] - 2024-04-16
