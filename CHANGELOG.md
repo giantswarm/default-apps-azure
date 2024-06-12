@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+ - Helm value `.Values.deleteOptions.moveAppsHelmOwnershipToClusterAzure` that enables migration of apps from default-apps-azure to cluster-azure (apps are paused, so they are not removed from the WC when default-apps-azure is deleted).
+
 ### Changed
 
 - Update `net-exporter` to 1.19.0.
