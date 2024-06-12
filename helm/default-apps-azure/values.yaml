@@ -12,7 +12,7 @@ cluster:
 subscriptionID: ""
 
 deleteOptions:
-   moveAppsHelmOwnershipToClusterAzure: false
+  moveAppsHelmOwnershipToClusterAzure: false
 
 userConfig:
   certManager:
