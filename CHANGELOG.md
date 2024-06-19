@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
  - Helm value `.Values.deleteOptions.moveAppsHelmOwnershipToClusterAzure` that enables migration of apps from default-apps-azure to cluster-azure (apps are paused, so they are not removed from the WC when default-apps-azure is deleted).
+ - Add kyverno as a dependency to `etcd-k8s-res-count-exporter` and `k8s-dns-node-cache`.
 
 ### Changed
 
