@@ -175,6 +175,7 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: kyverno
     enabled: true
     forceUpgrade: false
     namespace: kube-system
@@ -212,6 +213,7 @@ apps:
     appName: k8s-dns-node-cache
     chartName: k8s-dns-node-cache-app
     catalog: default
+    dependsOn: kyverno
     enabled: true
     namespace: kube-system
     # used by renovate
