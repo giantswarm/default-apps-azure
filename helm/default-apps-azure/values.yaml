@@ -175,6 +175,7 @@ apps:
     clusterValues:
       configMap: true
       secret: false
+    dependsOn: kyverno
     enabled: true
     forceUpgrade: false
     namespace: kube-system
