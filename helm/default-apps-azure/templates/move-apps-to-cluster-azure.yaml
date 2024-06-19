@@ -78,7 +78,7 @@ spec:
           type: RuntimeDefault
       containers:
       - name: update-apps-release-name
-        image: gsoci.azurecr.io/giantswarm/kubectl:1.29.2
+        image: gsoci.azurecr.io/giantswarm/kubectl:1.30.2
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
