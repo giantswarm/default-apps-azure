@@ -268,7 +268,6 @@ apps:
     clusterValues:
       configMap: true
       secret: false
-    dependsOn: coredns
     enabled: true
     forceUpgrade: false
     inCluster: true
