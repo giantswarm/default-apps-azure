@@ -11,6 +11,9 @@ cluster:
   private: false
 subscriptionID: ""
 
+deleteOptions:
+  moveAppsHelmOwnershipToClusterAzure: false
+
 userConfig:
   certManager:
     configMap:

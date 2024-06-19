@@ -556,6 +556,18 @@
         "clusterName": {
             "type": "string"
         },
+        "deleteOptions": {
+            "type": "object",
+            "title": "Delete options",
+            "properties": {
+                "moveAppsHelmOwnershipToClusterAzure": {
+                    "type": "boolean",
+                    "title": "Move Apps Helm ownership to cluster-azure",
+                    "description": "Don't delete Apps (and their ConfigMaps) and update Helm `meta.helm.sh/release-name` annotation on all resources so they are owned by cluster-azure. That way cluster-azure can continue updating same resources that were previously created by default-apps-azure.",
+                    "default": false
+                }
+            }
+        },
         "identityClientID": {
             "type": "string"
         },
