@@ -324,4 +324,4 @@ apps:
     namespace: kube-system
     # used by renovate
     # repo: giantswarm/vertical-pod-autoscaler-app
-    version: 5.2.2
+    version: 5.2.3
